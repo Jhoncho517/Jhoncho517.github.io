@@ -1514,42 +1514,49 @@ section {
 .marquee-track {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 3rem;
   width: max-content;
   animation: marquee-scroll 40s linear infinite;
 }
 .marquee:hover .marquee-track {
   animation-play-state: paused;
 }
-.logo-pill {
+.logo-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 64px;
-  min-width: 120px;
-  padding: 0 1.5rem;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 90px;
+  padding: 0 1.25rem;
+  opacity: 0.85;
+  text-decoration: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
-.logo-pill:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 26px rgba(34, 211, 238, 0.35);
+.logo-item:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
-.logo-pill img {
-  height: 30px;
+.logo-item img {
+  height: 60px;
   width: auto;
   display: block;
+}
+.logo-text {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+  white-space: nowrap;
 }
 @keyframes marquee-scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
 @media (max-width: 640px) {
-  .logo-pill { height: 52px; min-width: 96px; padding: 0 1rem; }
-  .logo-pill img { height: 24px; }
-  .marquee-track { gap: 0.85rem; animation-duration: 28s; }
+  .logo-item { height: 70px; padding: 0 1rem; }
+  .logo-item img { height: 46px; }
+  .logo-text { font-size: 22px; }
+  .marquee-track { gap: 2rem; animation-duration: 28s; }
 }
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; flex-wrap: wrap; justify-content: center; }
