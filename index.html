@@ -784,5 +784,42 @@
   </button>
 
   <script src="script.js"></script>
+  <!-- ===== JBOT ===== -->
+<div id="jbot">
+  <button id="jbot-toggle" aria-label="Chat with Jbot">
+    <i class="fas fa-robot"></i>
+    <span>Chat with Jbot</span>
+  </button>
+
+  <div id="jbot-window" class="jbot-hidden" role="dialog" aria-label="Chat with Jbot">
+    <div class="jbot-header">
+      <div class="jbot-id">
+        <span class="jbot-avatar"><i class="fas fa-robot"></i></span>
+        <div>
+          <strong>Jbot</strong>
+          <small>Ask me about Johnson</small>
+        </div>
+      </div>
+      <button id="jbot-close" aria-label="Close chat"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div id="jbot-messages" class="jbot-messages"></div>
+
+    <div class="jbot-chips" id="jbot-chips">
+      <button>Education</button>
+      <button>Skills</button>
+      <button>Projects</button>
+      <button>Experience</button>
+      <button>SERA Access</button>
+      <button>Contact</button>
+    </div>
+
+    <div class="jbot-input">
+      <input type="text" id="jbot-text" placeholder="Ask about Johnson..." autocomplete="off" />
+      <button id="jbot-send" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+</div>
+  
 </body>
 </html>
