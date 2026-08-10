@@ -1610,7 +1610,7 @@ section {
   .venture-logo { width: 120px; height: 120px; }
 }
 
-#jbot { position: fixed; bottom: 24px; right: 24px; z-index: 9999; font-family: Montserrat, Arial, sans-serif; }
+#jbot { position: fixed; bottom: 90px; right: 24px; z-index: 9999; font-family: Montserrat, Arial, sans-serif; }
 #jbot-toggle {
   display: flex; align-items: center; gap: 0.6rem;
   background: #22d3ee; color: #0a1730; border: none;
