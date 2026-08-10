@@ -1562,3 +1562,50 @@ section {
   .marquee-track { animation: none; flex-wrap: wrap; justify-content: center; }
 }
 
+#venture { padding: 4rem 0; }
+.venture-card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2.5rem;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  border-radius: 16px;
+}
+.venture-logo {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1rem;
+}
+.venture-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.venture-head { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.venture-role {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0a1730;
+  background: #22d3ee;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+.venture-tag { color: #5eead4; font-weight: 500; margin: 0.4rem 0 0.8rem; }
+.venture-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.2rem 0; }
+.venture-tags span {
+  font-size: 0.8rem;
+  color: #7dd3fc;
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+}
+.venture-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+@media (max-width: 700px) {
+  .venture-card { flex-direction: column; text-align: center; padding: 1.75rem; }
+  .venture-head, .venture-tags, .venture-actions { justify-content: center; }
+  .venture-logo { width: 120px; height: 120px; }
+}
