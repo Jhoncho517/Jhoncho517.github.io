@@ -483,3 +483,85 @@ window.addEventListener('load', () => {
     el.classList.add('visible');
   });
 });
+
+(function () {
+  var KB = [
+    { k: ["education","study","studying","degree","major","university","school","college","alfred","cornell","gpa","scholar","break through","btt"],
+      a: "Johnson is pursuing a B.S. in Electrical & Electronics Engineering with a double major in Mathematics at Alfred University (2025–2029). He's a Presidential Scholar with a 4.0 GPA and on the Dean's List. He's also part of Cornell University's Break Through Tech AI & Machine Learning program (2026–2027)." },
+    { k: ["skill","skills","language","languages","python","matlab","tools","tech stack","programming","proficient","code","coding"],
+      a: "Johnson's core skills include Python, C/C++, MATLAB, and Verilog for programming; machine learning and CNNs; embedded systems (ESP32, Arduino); CAD tools (SolidWorks, AutoCAD); and lab instrumentation. He also works with HPC/Linux and computational chemistry tools like CRYSTAL23." },
+    { k: ["project","projects","built","build","portfolio","work","digital twin","battery","esp32","semiconductor","ev","research"],
+      a: "Some of Johnson's featured projects: an AI-powered Digital Twin for smart battery management (CNNs, +30% efficiency), Battery Life Prediction with ML (benchmarked 14 models, best RMSE 0.085), a Wi-Fi Smart Switch using ESP32, organic-semiconductor research at the Knepp Lab, and an EV engine-conversion project. Scroll to the Projects section to see them all." },
+    { k: ["experience","intern","internship","job","worked","tanesco","step-lab","ge aerospace","forage","career"],
+      a: "Johnson's experience includes an Electrical Engineering internship at TANESCO in Tanzania (33kV transformers, AutoCAD, GIS), Engineering Lab Support at STEP-LAB (EV drivetrain project, SolidWorks), and a GE Aerospace electrical engineering job simulation via Forage." },
+    { k: ["research","knepp","semiconductor","ferroelectric","monte carlo","hpc","crystal","computational"],
+      a: "Johnson does computational research at the Knepp Lab studying how temperature affects electronic coupling in organic semiconductors, using DFT and the quasi-harmonic approximation on Linux HPC. He's also modeled ferroelectric FeFET devices for neuromorphic computing." },
+    { k: ["sera","company","co-founder","cofounder","startup","edtech","venture","scholarship","tanzania"],
+      a: "Johnson is Co-Founder of SERA Access — an EdTech platform helping Tanzanian students find verified scholarships, fellowships, and internships, paired with mentorship and application support. It's running an invitation-only 2026 pilot. See it at seraaccess.com." },
+    { k: ["leadership","nsbe","colorstack","president","vice president","club","lead","involvement"],
+      a: "Johnson serves as President of the NSBE chapter and Vice President of ColorStack at Alfred University, plus Co-Founder of SERA Access — all focused on championing diversity in STEM and helping students grow." },
+    { k: ["contact","email","reach","hire","connect","linkedin","github","phone","get in touch"],
+      a: "You can reach Johnson at johnsonjasson01@gmail.com or +1 (607) 454-1964. Find him on <a href='https://www.linkedin.com/in/johnson-jasson' target='_blank'>LinkedIn</a> and <a href='https://github.com/Jhoncho517' target='_blank'>GitHub</a>. He's actively seeking internships and research opportunities!" },
+    { k: ["who","about","yourself","introduce","summary","tell me about"],
+      a: "Johnson J. Jasson is a first-generation college student, Presidential Scholar, and 4.0 EE + Mathematics student at Alfred University. He builds at the intersection of hardware, software, and AI — and is passionate about engineering, tech, and business." },
+    { k: ["ai","machine learning","ml","neural","deep learning","cnn"],
+      a: "AI/ML is central to Johnson's work: he's built CNN-based battery health models, an AI digital twin, and completed Cornell's Break Through Tech AI program covering logistic regression, KNN, deep neural networks, NLP chatbots, TensorFlow, and scikit-learn." }
+  ];
+
+  var GREETINGS = ["hi","hello","hey","yo","hola","greetings","sup"];
+  var msgs, input;
+
+  function add(text, who) {
+    var d = document.createElement("div");
+    d.className = "jbot-msg " + (who === "user" ? "jbot-user" : "jbot-bot");
+    d.innerHTML = text;
+    msgs.appendChild(d);
+    msgs.scrollTop = msgs.scrollHeight;
+  }
+
+  function answer(q) {
+    var t = q.toLowerCase().trim();
+    if (GREETINGS.indexOf(t) !== -1 || t.length < 3) {
+      return "Hi! I'm Jbot 🤖 — ask me anything about Johnson: his education, skills, projects, experience, SERA Access, or how to reach him.";
+    }
+    var best = null, bestScore = 0;
+    KB.forEach(function (item) {
+      var score = 0;
+      item.k.forEach(function (kw) { if (t.indexOf(kw) !== -1) score++; });
+      if (score > bestScore) { bestScore = score; best = item; }
+    });
+    if (best && bestScore > 0) return best.a;
+    return "I can only answer questions about Johnson. Try asking about his education, skills, projects, experience, research, SERA Access, or contact info!";
+  }
+
+  function send(q) {
+    if (!q.trim()) return;
+    add(q, "user");
+    input.value = "";
+    setTimeout(function () { add(answer(q), "bot"); }, 350);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var toggle = document.getElementById("jbot-toggle");
+    var win = document.getElementById("jbot-window");
+    var close = document.getElementById("jbot-close");
+    var sendBtn = document.getElementById("jbot-send");
+    msgs = document.getElementById("jbot-messages");
+    input = document.getElementById("jbot-text");
+
+    var opened = false;
+    toggle.onclick = function () {
+      win.classList.toggle("jbot-hidden");
+      if (!opened && !win.classList.contains("jbot-hidden")) {
+        add("Hi! I'm <strong>Jbot</strong> 🤖 — Johnson's assistant. Ask me about his education, projects, skills, or tap a topic below.", "bot");
+        opened = true;
+      }
+    };
+    close.onclick = function () { win.classList.add("jbot-hidden"); };
+    sendBtn.onclick = function () { send(input.value); };
+    input.addEventListener("keypress", function (e) { if (e.key === "Enter") send(input.value); });
+    document.querySelectorAll("#jbot-chips button").forEach(function (b) {
+      b.onclick = function () { send(b.textContent); };
+    });
+  });
+})();
