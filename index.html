@@ -1,817 +1,3321 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Johnson Jasson | Electrical & Electronics Engineer, Mathematics </title>
+
+  <title>Johnson J. Jasson | Electrical & Electronics Engineer</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Johnson J. Jasson — Electrical & Electronics Engineering and Mathematics student working across embedded systems, semiconductors, AI, machine learning, energy systems, and entrepreneurship."
+  />
+
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
+
 <body>
 
-  <!-- ========== NAVIGATION ========== -->
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+
   <nav id="navbar">
+
     <div class="nav-container">
-      <a href="#hero" class="nav-logo">JJJ</a>
+
+      <a href="#hero" class="nav-logo">
+        JJJ
+      </a>
+
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+
+        <li>
+          <a href="#about" class="nav-link">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="#experience" class="nav-link">
+            Experience
+          </a>
+        </li>
+
+        <li>
+          <a href="#skills" class="nav-link">
+            Skills
+          </a>
+        </li>
+
+        <li>
+          <a href="#projects" class="nav-link">
+            Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact" class="nav-link">
+            Contact
+          </a>
+        </li>
+
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+
+
+      <!-- Mobile Menu -->
+
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Toggle navigation menu"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
       </button>
+
     </div>
+
   </nav>
 
-  <!-- ========== HERO ========== -->
+
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+
   <section id="hero">
-    <div class="hero-bg">
-      <div class="grid-overlay"></div>
-      <div class="particles" id="particles"></div>
+
+
+    <!-- Full-Screen Portrait -->
+
+    <div class="hero-photo-wrap">
+
+      <img
+        src="PROFESSIONAL PICTURE.jpeg"
+        alt="Johnson J. Jasson"
+        class="hero-photo"
+      />
+
+      <!-- Dark overlay -->
+      <div class="hero-photo-overlay"></div>
+
+      <!-- Subtle engineering grid -->
+      <div class="hero-grid"></div>
+
     </div>
+
+
+
+    <!-- HERO CONTENT -->
+
     <div class="hero-content">
+
+
       <h1 class="hero-name reveal">
-        Johnson<br /><span class="accent">J. Jasson</span>
+
+        Johnson<br />
+
+        <span class="hero-last-name">
+          J. Jasson
+        </span>
+
       </h1>
+
+
+
       <p class="hero-title reveal">
-        Electrical &amp; Electronics Engineer, Mathematics
-        <span class="typed-wrapper"><span id="typed"></span><span class="cursor">|</span></span>
+
+        Electrical &amp; Electronics Engineer
+
+        <span class="hero-divider">
+          ·
+        </span>
+
+        Mathematics
+
+        <span class="typed-wrapper">
+
+          <span class="hero-divider">
+            ·
+          </span>
+
+          <span id="typed"></span>
+
+          <span class="cursor">
+            |
+          </span>
+
+        </span>
+
       </p>
+
+
+
       <p class="hero-sub reveal">
-        Building intelligent systems at the intersection of hardware and AI.
+
+        Building intelligent systems at the intersection
+        of hardware, mathematics, and AI.
+
       </p>
+
+
+
+      <!-- Hero Buttons -->
+
       <div class="hero-cta reveal">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+
+        <a
+          href="#projects"
+          class="btn btn-primary"
+        >
+          View My Work
+        </a>
+
+
+        <a
+          href="#contact"
+          class="btn btn-outline"
+        >
+          Get In Touch
+        </a>
+
       </div>
+
+
+
+      <!-- Hero Social Links -->
+
       <div class="hero-socials reveal">
-        <a href="https://www.linkedin.com/in/johnson-jasson" target="_blank" rel="noopener" aria-label="LinkedIn">
+
+
+        <a
+          href="https://www.linkedin.com/in/johnson-jasson"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+
           <i class="fab fa-linkedin-in"></i>
+
         </a>
-        <a href="https://github.com/Jhoncho517" target="_blank" rel="noopener" aria-label="GitHub">
+
+
+
+        <a
+          href="https://github.com/Jhoncho517"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+
           <i class="fab fa-github"></i>
+
         </a>
-        <a href="mailto:johnsonjasson01@gmail.com" aria-label="Email">
+
+
+
+        <a
+          href="mailto:johnsonjasson01@gmail.com"
+          aria-label="Email"
+        >
+
           <i class="fas fa-envelope"></i>
+
         </a>
-        <!-- <a href="tel:+16074541964" aria-label="Phone">
-          <i class="fas fa-phone"></i>
-        </a> -->
+
+
       </div>
+
     </div>
-    <div class="hero-scroll-indicator">
-      <span></span>
-      <div class="scroll-line"></div>
-    </div>
+
+
+
+    <!-- Scroll Indicator -->
+
+    <a
+      href="#about"
+      class="hero-scroll"
+      aria-label="Scroll to About section"
+    >
+
+      <span>
+        Scroll to Explore
+      </span>
+
+      <i class="fas fa-chevron-down"></i>
+
+    </a>
+
   </section>
 
-  <!-- ========== ABOUT ========== -->
+
+
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+
   <section id="about">
+
     <div class="container">
+
+
       <div class="section-header reveal">
-        <span class="section-tag">Who I Am</span>
-        <h2 class="section-title">About <span class="accent">Me</span></h2>
+
+        <span class="section-tag">
+          Who I Am
+        </span>
+
+        <h2 class="section-title">
+
+          About
+
+          <span class="accent">
+            Me
+          </span>
+
+        </h2>
+
       </div>
+
+
+
       <div class="about-grid">
+
+
+        <!-- About Image -->
+
         <div class="about-image-wrap reveal">
+
           <div class="about-img-frame">
-            <img src="PROFESSIONAL PICTURE.jpeg" alt="Johnson J. Jasson" class="about-img" />
-            <div class="img-glow">  
-            </div>
-            
-            <div class="about-stats">
-              <!-- <div class="stat-item"><span class="stat-number">5+</span><span class="stat-label">Projects</span></div>
-              <div class="stat-item"><span class="stat-number">2+</span><span class="stat-label">Majors</span></div>
-              <div class="stat-item"><span class="stat-number">4.0</span><span class="stat-label">GPA</span></div> -->
-              </div>
+
+            <img
+              src="PROFESSIONAL PICTURE.jpeg"
+              alt="Johnson J. Jasson"
+              class="about-img"
+            />
+
+            <div class="img-glow"></div>
+
           </div>
+
         </div>
+
+
+
+        <!-- About Text -->
+
         <div class="about-text reveal">
-          <h3>EE + Mathematics &amp; <span class="accent">Tech + Business Enthusiast</span></h3>
+
+
+          <h3>
+
+            EE + Mathematics &amp;
+
+            <span class="accent">
+              Tech + Business Enthusiast
+            </span>
+
+          </h3>
+
+
+
           <p>
-            I'm a <strong>first-generation</strong> college student and Presidential Scholar at Alfred University, pursuing a
-            Bachelor of Science in <strong>Electrical and Electronics Engineering</strong> with a double major in <strong>Mathematics</strong>.
-            I am also a Co-Founder of <strong>SERA</strong>,an EdTech Company based in Africa, Tanzania to scale up education and opportunity accessibility to scholars.
-            My passion lies at the intersection of hardware engineering, software engineering and Mathematics; building
-            systems that are not just functional, but intelligent.
+
+            I'm a <strong>first-generation college student</strong>
+            and Presidential Scholar at Alfred University,
+            pursuing a Bachelor of Science in
+
+            <strong>
+              Electrical and Electronics Engineering
+            </strong>
+
+            with a double major in
+
+            <strong>
+              Mathematics
+            </strong>.
+
           </p>
+
+
+
           <p>
-            I work across <strong>machine learning</strong>, <strong>AI</strong>, <strong>semiconductor research</strong>, 
-            <strong>embedded systems</strong>, and <strong>computational engineering</strong>, from modeling ferroelectric devices
-            for <strong>neuromorphic</strong> computing to developing AI-driven digital twins and ESP32-based IoT systems.
+
+            I am also a Co-Founder of
+
+            <strong>
+              SERA
+            </strong>,
+
+            an EdTech company focused on expanding education,
+            career opportunity, mentorship, and resource
+            accessibility for students in Tanzania and across Africa.
+
           </p>
+
+
+
           <p>
-            Beyond the academics, I lead as President of the NSBE Chapter and Vice President of ColorStack at Alfred
-            University; championing diversity in STEM and empowering the next generation of engineers.
+
+            My interests sit at the intersection of hardware engineering,
+            software, mathematics, and artificial intelligence.
+
+            I enjoy building systems that are not only functional,
+            but intelligent, measurable, and capable of solving
+            real-world engineering problems.
+
           </p>
+
+
+
+          <p>
+
+            I work across
+
+            <strong>machine learning</strong>,
+            <strong>artificial intelligence</strong>,
+            <strong>semiconductor research</strong>,
+            <strong>embedded systems</strong>,
+            and
+            <strong>computational engineering</strong>,
+
+            from studying electronic behavior in semiconductor
+            materials to developing AI-driven digital twins
+            and ESP32-based embedded systems.
+
+          </p>
+
+
+
+          <p>
+
+            Beyond academics, I lead as President of the NSBE Chapter
+            and Vice President of ColorStack at Alfred University,
+            helping expand access to engineering opportunities,
+            professional development, mentorship, and technical careers.
+
+          </p>
+
+
+
+          <!-- About Info -->
+
           <div class="about-info-grid">
+
+
             <div class="info-item">
+
               <i class="fas fa-map-marker-alt"></i>
-              <span>Alfred, New York</span>
+
+              <span>
+                Alfred, New York
+              </span>
+
             </div>
+
+
+
             <div class="info-item">
+
               <i class="fas fa-university"></i>
-              <span>Alfred University</span>
+
+              <span>
+                Alfred University
+              </span>
+
             </div>
+
+
+
             <div class="info-item">
+
               <i class="fas fa-graduation-cap"></i>
-              <span>B.S. EEE + Mathematics</span>
+
+              <span>
+                B.S. EEE + Mathematics
+              </span>
+
             </div>
+
+
+
             <div class="info-item">
+
               <i class="fas fa-calendar-alt"></i>
-              <span></span>
+
+              <span>
+                Class of 2029
+              </span>
+
             </div>
+
+
           </div>
+
+
+
+          <!-- About Actions -->
+
           <div class="about-actions">
-           <!-- <a href="Jasson__Johnson_Resume.pdf" download class="btn btn-primary">
-              <i class="fas fa-download"></i> Download Resume
-            </a> -->
-            <a href="https://www.linkedin.com/in/johnson-jasson" target="_blank" rel="noopener" class="btn btn-outline">
-              <i class="fab fa-linkedin-in"></i> LinkedIn
+
+
+            <a
+              href="https://www.linkedin.com/in/johnson-jasson"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline"
+            >
+
+              <i class="fab fa-linkedin-in"></i>
+
+              LinkedIn
+
             </a>
+
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <!-- ========== EXPERIENCE ========== -->
+
+
+  <!-- ============================================================
+       EXPERIENCE
+       ============================================================ -->
+
   <section id="experience">
+
     <div class="container">
+
+
       <div class="section-header reveal">
-        <span class="section-tag">My Journey</span>
-        <h2 class="section-title">Experience &amp; <span class="accent">Education</span></h2>
+
+        <span class="section-tag">
+          My Journey
+        </span>
+
+        <h2 class="section-title">
+
+          Experience &amp;
+
+          <span class="accent">
+            Education
+          </span>
+
+        </h2>
+
       </div>
+
+
+
       <div class="timeline">
 
-        <!-- Education -->
+
+        <!-- ======================================================
+             EDUCATION
+             ====================================================== -->
+
         <div class="timeline-group reveal">
+
+
           <div class="timeline-group-label">
-            <i class="fas fa-graduation-cap"></i> Education
+
+            <i class="fas fa-graduation-cap"></i>
+
+            Education
+
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="tc-header">
-                <div>
-                  <h3>B.S. Electrical &amp; Electronics Engineering</h3>
-                  <h4>Alfred University — Alfred, NY</h4>
-                </div>
-                <span class="tc-date">Aug 2025 – May 2029</span>
-              </div>
-              <p>Double Major in Mathematics. Presidential Scholar, Dean's List Fall 2025, GPA 4.00/4.00.</p>
-              <div class="tc-tags">
-                <span>Presidential Scholar</span>
-                <span>GPA 4.0</span>
-                <span>First-Gen Student</span>
-                <span>Dean's List</span>
-              </div>
-              <div class="tc-courses">
-                <strong>Relevant Courses:</strong> Emerging Nanoelectronics, Battery Machine Learning, OOP (C/C++),
-                Multivariable Calculus, Differential Equations, Advanced Electric Transmission, MATLAB, CAD/SOLIDWORKS, Electrical Circuits.
-              </div>
-            </div>
-          </div>
+
+
+          <!-- Alfred University -->
 
           <div class="timeline-item">
+
             <div class="timeline-dot"></div>
+
             <div class="timeline-card">
+
+
               <div class="tc-header">
+
                 <div>
-                  <h3> Cornell University, Break Through Tech — AI &amp; Machine Learning</h3>
-                  <h4>Artificial Intelligence Program</h4>
+
+                  <h3>
+                    B.S. Electrical &amp; Electronics Engineering
+                  </h3>
+
+                  <h4>
+                    Alfred University — Alfred, NY
+                  </h4>
+
                 </div>
-                <span class="tc-date">Mar 2026 – March 2027</span>
+
+
+                <span class="tc-date">
+                  Aug 2025 – May 2029
+                </span>
+
               </div>
-              <p>Selected for Cornell's Break Through Tech AI program, an intensive, project-based track in applied machine learning and AI. 
-                Built and evaluated models spanning logistic regression, K-Nearest Neighbors (KNN), deep neural networks, and NLP-driven chatbots, 
-                working end-to-end from exploratory data analysis (EDA) and feature engineering (one-hot encoding) through model training 
-                and business interpretation.
-                </p>
-                <p> <strong>Capstone:</strong> developed a machine learning model to classify Airbnb listing price categories 
-                from location, amenities, bed count, neighborhood, and host attributes; translating raw features into actionable pricing insights. 
-                Tech stack: Python, NumPy, scikit-learn, TensorFlow, Jupyter Notebooks, and Retrieval-Augmented Generation (RAG).
+
+
+
+              <p>
+
+                Double Major in Mathematics.
+                Presidential Scholar,
+                Dean's List Fall 2025,
+                GPA 4.00/4.00.
+
               </p>
-              <div class="tc-tags"><span>AI</span><span>Machine Learning</span></div>
+
+
+
+              <div class="tc-tags">
+
+                <span>
+                  Presidential Scholar
+                </span>
+
+                <span>
+                  GPA 4.0
+                </span>
+
+                <span>
+                  First-Gen Student
+                </span>
+
+                <span>
+                  Dean's List
+                </span>
+
+              </div>
+
+
+
+              <div class="tc-courses">
+
+                <strong>
+                  Relevant Courses:
+                </strong>
+
+                Emerging Nanoelectronics,
+                Battery Machine Learning,
+                Object-Oriented Programming (C/C++),
+                Multivariable Calculus,
+                Differential Equations,
+                Advanced Electric Transmission,
+                MATLAB,
+                CAD/SOLIDWORKS,
+                and Electrical Circuits.
+
+              </div>
+
             </div>
+
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="tc-header">
-                <div>
-                  <h3>CodePath — Technical Interview Prep</h3>
-                  <h4>Data Structures &amp; Algorithms</h4>
-                </div>
-                <span class="tc-date">Sep 2025 – Dec 2025</span>
-              </div>
-              <p>Developed proficiency in Python while studying core data structures and algorithms including arrays, linked lists, trees, recursion, and complexity analysis.</p>
-              <div class="tc-tags"><span>Python</span><span>DSA</span><span>C++</span></div>
-            </div>
-          </div>
+
+
+          <!-- Break Through Tech -->
 
           <div class="timeline-item">
+
             <div class="timeline-dot"></div>
+
             <div class="timeline-card">
+
+
               <div class="tc-header">
+
                 <div>
-                  <h3>McKinsey &amp; Company Forward Program</h3>
-                  <h4>Problem-Solving &amp; Digital Transformation</h4>
+
+                  <h3>
+                    Cornell University, Break Through Tech
+                  </h3>
+
+                  <h4>
+                    Artificial Intelligence &amp; Machine Learning Program
+                  </h4>
+
                 </div>
-                <span class="tc-date">Sep 2025 – Dec 2025</span>
+
+
+                <span class="tc-date">
+                  Mar 2026 – Mar 2027
+                </span>
+
               </div>
-              <p>Developed practical skills in structured problem-solving, leadership, and digital transformation.</p>
-              <div class="tc-tags"><span>Leadership</span><span>Problem-Solving</span><span>Digital Transformation</span></div>
+
+
+
+              <p>
+
+                Selected for Break Through Tech's intensive,
+                project-based artificial intelligence program focused
+                on applied machine learning and technical development.
+
+              </p>
+
+
+
+              <p>
+
+                Developed and evaluated models spanning logistic regression,
+                K-Nearest Neighbors, deep neural networks, and NLP-based
+                applications while working through exploratory data analysis,
+                feature engineering, model training, evaluation,
+                and interpretation.
+
+              </p>
+
+
+
+              <p>
+
+                <strong>
+                  Capstone:
+                </strong>
+
+                Developed a machine learning model to classify Airbnb
+                listing price categories from location, amenities,
+                bed count, neighborhood, and host attributes.
+
+              </p>
+
+
+
+              <div class="tc-tags">
+
+                <span>
+                  Python
+                </span>
+
+                <span>
+                  AI
+                </span>
+
+                <span>
+                  Machine Learning
+                </span>
+
+                <span>
+                  TensorFlow
+                </span>
+
+                <span>
+                  scikit-learn
+                </span>
+
+                <span>
+                  RAG
+                </span>
+
+              </div>
+
             </div>
+
           </div>
+
+
+
+          <!-- CodePath -->
+
+          <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+
+              <div class="tc-header">
+
+                <div>
+
+                  <h3>
+                    CodePath — Technical Interview Prep
+                  </h3>
+
+                  <h4>
+                    Data Structures &amp; Algorithms
+                  </h4>
+
+                </div>
+
+
+                <span class="tc-date">
+                  Sep 2025 – Dec 2025
+                </span>
+
+              </div>
+
+
+
+              <p>
+
+                Developed proficiency in Python while studying
+                core data structures and algorithms including arrays,
+                linked lists, trees, recursion, searching,
+                sorting, and complexity analysis.
+
+              </p>
+
+
+
+              <div class="tc-tags">
+
+                <span>
+                  Python
+                </span>
+
+                <span>
+                  DSA
+                </span>
+
+                <span>
+                  C++
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- McKinsey -->
+
+          <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+
+              <div class="tc-header">
+
+                <div>
+
+                  <h3>
+                    McKinsey &amp; Company Forward Program
+                  </h3>
+
+                  <h4>
+                    Problem-Solving &amp; Digital Transformation
+                  </h4>
+
+                </div>
+
+
+                <span class="tc-date">
+                  Sep 2025 – Dec 2025
+                </span>
+
+              </div>
+
+
+
+              <p>
+
+                Developed practical skills in structured problem-solving,
+                leadership, communication, adaptability,
+                and digital transformation.
+
+              </p>
+
+
+
+              <div class="tc-tags">
+
+                <span>
+                  Leadership
+                </span>
+
+                <span>
+                  Problem-Solving
+                </span>
+
+                <span>
+                  Digital Transformation
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <!-- Work Experience -->
+
+
+        <!-- ======================================================
+             WORK EXPERIENCE
+             ====================================================== -->
+
         <div class="timeline-group reveal">
+
+
           <div class="timeline-group-label">
-            <i class="fas fa-briefcase"></i> Work Experience
+
+            <i class="fas fa-briefcase"></i>
+
+            Work Experience
+
           </div>
 
+
+
+          <!-- TANESCO -->
+
           <div class="timeline-item">
+
             <div class="timeline-dot accent-dot"></div>
+
             <div class="timeline-card featured-card">
+
+
               <div class="tc-header">
+
                 <div>
-                  <h3>Electrical Engineering Intern</h3>
-                  <h4>Tanzania Electric Supply Company (TANESCO) — Dar es Salaam, Tanzania</h4>
+
+                  <h3>
+                    Electrical Engineering Intern
+                  </h3>
+
+                  <h4>
+                    Tanzania Electric Supply Company (TANESCO)
+                    — Dar es Salaam, Tanzania
+                  </h4>
+
                 </div>
-                <span class="tc-date">Jul 2024 – Sep 2024</span>
+
+
+                <span class="tc-date">
+                  Jul 2024 – Sep 2024
+                </span>
+
               </div>
+
+
+
               <ul class="tc-bullets">
-                <li>Restored optimal efficiency of a <strong>33kV transformer</strong> serving a metro area of 20 million residents through in-depth diagnostics and fault isolation.</li>
-                <li>Designed <strong>230V service lines in AutoCAD</strong> in full compliance with IEC standards, optimising power distribution across service zones.</li>
-                <li>Reduced Industry Packaging Limited's electricity costs by <strong>60%</strong> by diagnosing a critical power factor deficiency and achieving a 0.95 PF target.</li>
-                <li>Ensured <strong>100% regulatory compliance</strong> on project rollouts through thorough documentation and collaboration with field engineers.</li>
+
+
+                <li>
+
+                  Supported diagnostics and fault isolation
+                  on a
+
+                  <strong>
+                    33kV transformer
+                  </strong>
+
+                  serving a major metropolitan distribution network.
+
+                </li>
+
+
+
+                <li>
+
+                  Designed
+
+                  <strong>
+                    230V service lines in AutoCAD
+                  </strong>
+
+                  while following applicable electrical
+                  engineering standards and distribution requirements.
+
+                </li>
+
+
+
+                <li>
+
+                  Diagnosed a major power-factor deficiency
+                  for an industrial customer and supported corrective
+                  measures toward a
+
+                  <strong>
+                    0.95 power factor target.
+                  </strong>
+
+                </li>
+
+
+
+                <li>
+
+                  Supported technical documentation,
+                  field engineering activities,
+                  and regulatory compliance across
+                  electrical distribution projects.
+
+                </li>
+
+
               </ul>
-              <div class="tc-tags"><span>AutoCAD</span><span>GIS</span><span>Substation</span><span>Troubleshooting</span><span>IEC Standards</span></div>
+
+
+
+              <div class="tc-tags">
+
+                <span>
+                  AutoCAD
+                </span>
+
+                <span>
+                  GIS
+                </span>
+
+                <span>
+                  Substations
+                </span>
+
+                <span>
+                  Troubleshooting
+                </span>
+
+                <span>
+                  IEC Standards
+                </span>
+
+              </div>
+
             </div>
+
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-dot accent-dot"></div>
-            <div class="timeline-card">
-              <div class="tc-header">
-                <div>
-                  <h3>Engineering Laboratory Support Staff</h3>
-                  <h4>STEP-LAB, Alfred University — Alfred, NY</h4>
-                </div>
-                <span class="tc-date">Sep 2025 – Present</span>
-              </div>
-              <ul class="tc-bullets">
-                <li>Extended vehicle range by <strong>25+ miles</strong> and cut operational costs significantly by leading the EV Club's engine conversion project — replacing a combustion engine with a fully integrated EV drivetrain.</li>
-                <li>Designed and validated prototype components using <strong>SolidWorks</strong> for 3D modelling, accelerating project development cycles and reducing design errors.</li>
-                <li>Maintained a <strong>100% safety compliance record</strong> across all lab sessions by enforcing established safety protocols and conducting routine equipment checks.</li>
-              </ul>
-              <div class="tc-tags"><span>SolidWorks</span><span>EV Systems</span><span>3D Modelling</span><span>Lab Safety</span></div>
-            </div>
-          </div>
+
+
+          <!-- STEP Lab -->
 
           <div class="timeline-item">
+
             <div class="timeline-dot accent-dot"></div>
+
             <div class="timeline-card">
+
+
               <div class="tc-header">
+
                 <div>
-                  <h3>GE Aerospace — Electrical Engineering Job Simulation</h3>
-                  <h4>Forage</h4>
+
+                  <h3>
+                    Engineering Laboratory Support Staff
+                  </h3>
+
+                  <h4>
+                    STEP-LAB, Alfred University — Alfred, NY
+                  </h4>
+
                 </div>
-                <span class="tc-date">Nov 2025 – Dec 2025</span>
+
+
+                <span class="tc-date">
+                  Sep 2025 – Present
+                </span>
+
               </div>
+
+
+
               <ul class="tc-bullets">
-                <li>Acquired technical proficiency in electrical distribution planning using <strong>AutoCAD</strong>, circuit breaker selection, and compliance with FAA and EASA Aerospace standards.</li>
-                <li>Developed critical thinking to diagnose and strategize solutions for avionics reliability in challenging environmental conditions.</li>
+
+
+                <li>
+
+                  Supported the EV Club's engine-conversion project,
+                  replacing a combustion powertrain with an
+                  electric drivetrain and assisting with
+                  engineering integration and prototyping.
+
+                </li>
+
+
+
+                <li>
+
+                  Designed and validated prototype components using
+
+                  <strong>
+                    SolidWorks
+                  </strong>
+
+                  for 3D modeling and engineering development.
+
+                </li>
+
+
+
+                <li>
+
+                  Maintained laboratory safety standards
+                  through equipment checks,
+                  workspace organization,
+                  and safety-protocol enforcement.
+
+                </li>
+
+
               </ul>
-              <div class="tc-tags"><span>AutoCAD</span><span>FAA Standards</span><span>EASA</span><span>Avionics</span></div>
+
+
+
+              <div class="tc-tags">
+
+                <span>
+                  SolidWorks
+                </span>
+
+                <span>
+                  EV Systems
+                </span>
+
+                <span>
+                  3D Modeling
+                </span>
+
+                <span>
+                  Lab Safety
+                </span>
+
+              </div>
+
             </div>
+
           </div>
+
+
+
+          <!-- GE Aerospace -->
+
+          <div class="timeline-item">
+
+            <div class="timeline-dot accent-dot"></div>
+
+            <div class="timeline-card">
+
+
+              <div class="tc-header">
+
+                <div>
+
+                  <h3>
+                    GE Aerospace — Electrical Engineering Job Simulation
+                  </h3>
+
+                  <h4>
+                    Forage
+                  </h4>
+
+                </div>
+
+
+                <span class="tc-date">
+                  Nov 2025 – Dec 2025
+                </span>
+
+              </div>
+
+
+
+              <ul class="tc-bullets">
+
+
+                <li>
+
+                  Applied electrical distribution planning concepts
+                  using
+
+                  <strong>
+                    AutoCAD
+                  </strong>,
+
+                  circuit-breaker selection,
+                  and aerospace electrical standards.
+
+                </li>
+
+
+
+                <li>
+
+                  Developed technical reasoning around
+                  avionics reliability,
+                  electrical-system design,
+                  and environmental operating conditions.
+
+                </li>
+
+
+              </ul>
+
+
+
+              <div class="tc-tags">
+
+                <span>
+                  AutoCAD
+                </span>
+
+                <span>
+                  FAA Standards
+                </span>
+
+                <span>
+                  EASA
+                </span>
+
+                <span>
+                  Avionics
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
 
-        <!-- Leadership -->
+
+
+        <!-- ======================================================
+             LEADERSHIP
+             ====================================================== -->
+
         <div class="timeline-group reveal">
+
+
           <div class="timeline-group-label">
-            <i class="fas fa-users"></i> Leadership &amp; Involvement
+
+            <i class="fas fa-users"></i>
+
+            Leadership &amp; Involvement
+
           </div>
 
+
+
+          <!-- NSBE -->
+
           <div class="timeline-item">
+
             <div class="timeline-dot green-dot"></div>
+
             <div class="timeline-card">
+
+
               <div class="tc-header">
+
                 <div>
-                  <h3>President, NSBE Chapter</h3>
-                  <h4>Alfred University — Alfred, NY</h4>
+
+                  <h3>
+                    President, NSBE Chapter
+                  </h3>
+
+                  <h4>
+                    Alfred University — Alfred, NY
+                  </h4>
+
                 </div>
-                <span class="tc-date">Jan 2026 – Present</span>
+
+
+                <span class="tc-date">
+                  Jan 2026 – Present
+                </span>
+
               </div>
-              <p>Launched and led the campus chapter, increasing awareness of NSBE and creating a supportive platform for Black engineering students to showcase and develop their skills.</p>
-              <div class="tc-tags"><span>Leadership</span><span>Communication</span><span>Teamwork</span></div>
+
+
+
+              <p>
+
+                Launched and led the campus chapter,
+                building a supportive platform for engineering
+                students to develop professionally,
+                discover opportunities,
+                and strengthen their technical community.
+
+              </p>
+
+
+
+              <div class="tc-tags">
+
+                <span>
+                  Leadership
+                </span>
+
+                <span>
+                  Communication
+                </span>
+
+                <span>
+                  Teamwork
+                </span>
+
+              </div>
+
             </div>
+
           </div>
 
+
+
+          <!-- ColorStack -->
+
           <div class="timeline-item">
+
             <div class="timeline-dot green-dot"></div>
+
             <div class="timeline-card">
+
+
               <div class="tc-header">
+
                 <div>
-                  <h3>Vice President, ColorStack Chapter</h3>
-                  <h4>Alfred University — Alfred, NY</h4>
+
+                  <h3>
+                    Vice President, ColorStack Chapter
+                  </h3>
+
+                  <h4>
+                    Alfred University — Alfred, NY
+                  </h4>
+
                 </div>
-                <span class="tc-date">Jan 2026 – Present</span>
+
+
+                <span class="tc-date">
+                  Jan 2026 – Present
+                </span>
+
               </div>
+
+
+
               <ul class="tc-bullets">
-                <li>Led resume and LinkedIn optimisation workshops, guiding students in crafting polished LaTeX-formatted resumes and standout LinkedIn profiles.</li>
-                <li>Organised career development workshops covering internship application strategies, networking techniques, and opportunity sharing.</li>
-                <li>Expanded members' professional networks by facilitating intentional networking sessions with industry contacts and recruiters.</li>
+
+
+                <li>
+
+                  Led resume and LinkedIn optimization workshops
+                  to improve student professional branding
+                  and internship readiness.
+
+                </li>
+
+
+
+                <li>
+
+                  Organized career-development workshops
+                  covering internship applications,
+                  networking,
+                  and opportunity discovery.
+
+                </li>
+
+
+
+                <li>
+
+                  Facilitated networking and professional-development
+                  opportunities connecting students with
+                  industry resources.
+
+                </li>
+
+
               </ul>
-              <div class="tc-tags"><span>Leadership</span><span>Career Development</span><span>Networking</span></div>
+
+
+
+              <div class="tc-tags">
+
+                <span>
+                  Leadership
+                </span>
+
+                <span>
+                  Career Development
+                </span>
+
+                <span>
+                  Networking
+                </span>
+
+              </div>
+
             </div>
+
           </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
-  <!-- ========== SKILLS ========== -->
+
+
+  <!-- ============================================================
+       SKILLS
+       ============================================================ -->
+
   <section id="skills">
+
     <div class="container">
+
+
       <div class="section-header reveal">
-        <span class="section-tag">What I Know</span>
-        <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+
+        <span class="section-tag">
+          What I Know
+        </span>
+
+
+        <h2 class="section-title">
+
+          Technical
+
+          <span class="accent">
+            Skills
+          </span>
+
+        </h2>
+
       </div>
+
+
+
       <div class="skills-grid">
 
+
+        <!-- Programming -->
+
         <div class="skill-category reveal">
-          <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
-          <h3>Programming Languages</h3>
+
+          <div class="skill-cat-icon">
+
+            <i class="fas fa-code"></i>
+
+          </div>
+
+
+          <h3>
+            Programming Languages
+          </h3>
+
+
           <div class="skill-bars">
+
+
             <div class="skill-bar-item">
-              <div class="skill-bar-label"><span>Python</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+
+              <div class="skill-bar-label">
+
+                <span>
+                  Python
+                </span>
+
+              </div>
+
+
+              <div class="skill-bar-track">
+
+                <div
+                  class="skill-bar-fill"
+                  data-width="90"
+                ></div>
+
+              </div>
+
             </div>
+
+
+
             <div class="skill-bar-item">
-              <div class="skill-bar-label"><span>C / C++</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+
+              <div class="skill-bar-label">
+
+                <span>
+                  C / C++
+                </span>
+
+              </div>
+
+
+              <div class="skill-bar-track">
+
+                <div
+                  class="skill-bar-fill"
+                  data-width="85"
+                ></div>
+
+              </div>
+
             </div>
+
+
+
             <div class="skill-bar-item">
-              <div class="skill-bar-label"><span>MATLAB</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+
+              <div class="skill-bar-label">
+
+                <span>
+                  MATLAB
+                </span>
+
+              </div>
+
+
+              <div class="skill-bar-track">
+
+                <div
+                  class="skill-bar-fill"
+                  data-width="80"
+                ></div>
+
+              </div>
+
             </div>
+
+
+
             <div class="skill-bar-item">
-              <div class="skill-bar-label"><span>Verilog / VHDL</span></div>
-              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+
+              <div class="skill-bar-label">
+
+                <span>
+                  Verilog / VHDL
+                </span>
+
+              </div>
+
+
+              <div class="skill-bar-track">
+
+                <div
+                  class="skill-bar-fill"
+                  data-width="70"
+                ></div>
+
+              </div>
+
             </div>
+
           </div>
+
         </div>
 
+
+
+        <!-- Hardware -->
+
         <div class="skill-category reveal">
-          <div class="skill-cat-icon"><i class="fas fa-microchip"></i></div>
-          <h3>Hardware &amp; Circuits</h3>
+
+
+          <div class="skill-cat-icon">
+
+            <i class="fas fa-microchip"></i>
+
+          </div>
+
+
+          <h3>
+            Hardware &amp; Circuits
+          </h3>
+
+
           <div class="skill-tags">
+
             <span>Analog/Digital Circuits</span>
+
             <span>Breadboard Prototyping</span>
+
             <span>ESP32 / Arduino</span>
+
             <span>Transistors &amp; Diodes</span>
+
             <span>Digital Logic</span>
+
             <span>Embedded Systems</span>
+
             <span>Circuit Debugging</span>
+
             <span>High-Voltage Systems</span>
+
+            <span>FreeRTOS</span>
+
+            <span>GPIO</span>
+
           </div>
+
         </div>
 
+
+
+        <!-- CAD -->
+
         <div class="skill-category reveal">
-          <div class="skill-cat-icon"><i class="fas fa-drafting-compass"></i></div>
-          <h3>CAD &amp; Engineering Tools</h3>
+
+
+          <div class="skill-cat-icon">
+
+            <i class="fas fa-drafting-compass"></i>
+
+          </div>
+
+
+          <h3>
+            CAD &amp; Engineering Tools
+          </h3>
+
+
           <div class="skill-tags">
-            <span>AutoCAD (Electrical)</span>
+
+            <span>AutoCAD Electrical</span>
+
             <span>SolidWorks</span>
+
             <span>GIS</span>
+
             <span>CRYSTAL23</span>
+
             <span>LaTeX</span>
+
             <span>MS Office Suite</span>
+
             <span>MobaXterm</span>
+
             <span>Google Colab</span>
+
+            <span>Git / GitHub</span>
+
+            <span>VS Code</span>
+
           </div>
+
         </div>
 
+
+
+        <!-- AI -->
+
         <div class="skill-category reveal">
-          <div class="skill-cat-icon"><i class="fas fa-brain"></i></div>
-          <h3>AI &amp; Machine Learning</h3>
+
+
+          <div class="skill-cat-icon">
+
+            <i class="fas fa-brain"></i>
+
+          </div>
+
+
+          <h3>
+            AI &amp; Machine Learning
+          </h3>
+
+
           <div class="skill-tags">
+
             <span>Convolutional Neural Networks</span>
+
             <span>Machine Learning</span>
+
             <span>Data Analysis</span>
+
             <span>Digital Twin Modeling</span>
+
             <span>Computer Vision</span>
+
             <span>Generative AI</span>
+
             <span>HPC / Linux</span>
+
             <span>Computational Chemistry</span>
+
+            <span>scikit-learn</span>
+
+            <span>TensorFlow</span>
+
           </div>
+
         </div>
 
+
+
+        <!-- Instrumentation -->
+
         <div class="skill-category reveal">
-          <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
-          <h3>Instrumentation</h3>
+
+
+          <div class="skill-cat-icon">
+
+            <i class="fas fa-tools"></i>
+
+          </div>
+
+
+          <h3>
+            Instrumentation
+          </h3>
+
+
           <div class="skill-tags">
+
             <span>Oscilloscope</span>
-            <span>Digital Multimeter (DMM)</span>
+
+            <span>Digital Multimeter</span>
+
             <span>Clamp Meter</span>
+
             <span>Ohmmeter</span>
+
             <span>Soldering Tools</span>
+
             <span>Function Generator</span>
+
           </div>
+
         </div>
 
+
+
+        <!-- Soft Skills -->
+
         <div class="skill-category reveal">
-          <div class="skill-cat-icon"><i class="fas fa-star"></i></div>
-          <h3>Soft Skills</h3>
-          <div class="skill-tags">
-            <span>Leadership</span>
-            <span>Problem-Solving</span>
-            <span>Research</span>
-            <span>Technical Presentations</span>
-            <span>Team Collaboration</span>
-            <span>Project Management</span>
+
+
+          <div class="skill-cat-icon">
+
+            <i class="fas fa-star"></i>
+
           </div>
+
+
+          <h3>
+            Professional Skills
+          </h3>
+
+
+          <div class="skill-tags">
+
+            <span>Leadership</span>
+
+            <span>Problem-Solving</span>
+
+            <span>Research</span>
+
+            <span>Technical Presentations</span>
+
+            <span>Team Collaboration</span>
+
+            <span>Project Management</span>
+
+          </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
+
+
+
+  <!-- ============================================================
+       VENTURE
+       ============================================================ -->
 
   <section id="venture">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">What I'm Building</span>
-      <h2 class="section-title">Co-Founder &amp; <span class="accent">Venture</span></h2>
-    </div>
 
-    <div class="venture-card reveal">
-      <div class="venture-logo">
-        <img src="SERA_Logo.jpg" alt="SERA Access logo" />
-      </div>
-      <div class="venture-body">
-        <div class="venture-head">
-          <h3>SERA</h3>
-          <span class="venture-role">Co-Founder</span>
-        </div>
-        <p class="venture-tag">Student Empowerment &amp; Resource Access · EdTech · Tanzania</p>
-        <p>
-          An <strong>EdTech</strong> platform I co-founded to help Tanzanian students get funded and hired. SERA surfaces
-          verified scholarships, fellowships, internships, and competitions matched to each student's level 
-          with eligibility and deadlines shown clearly, then pairs them with mentors and real application
-          support on career portifolio building, resumes, self-pitch essays, and interviews. 
-          <p>
-          The future prospects of the company is to raise <strong>innovative</strong> minds of Africa to new opportunities, funds, technology, sponsorship and help in industrializing
-          Africa in the new technology era of AI. 
-          </p>
-      </p>
-        <div class="venture-tags">
-          <span>EdTech</span><span>Scholarships</span><span>Mentorship</span><span>Access &amp; Equity</span>
-        </div>
-        <div class="venture-actions">
-          <a href="https://www.seraaccess.com/" target="_blank" rel="noopener" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> Visit SERA Access
-          </a>
-          <a href="https://www.linkedin.com/company/sera-access/" target="_blank" rel="noopener" class="btn btn-outline">
-            <i class="fab fa-linkedin-in"></i> LinkedIn
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- ========== PROJECTS ========== -->
-  <section id="projects">
     <div class="container">
+
+
       <div class="section-header reveal">
-        <span class="section-tag">What I've Built</span>
-        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+
+        <span class="section-tag">
+          What I'm Building
+        </span>
+
+
+        <h2 class="section-title">
+
+          Co-Founder &amp;
+
+          <span class="accent">
+            Venture
+          </span>
+
+        </h2>
+
       </div>
+
+
+
+      <div class="venture-card reveal">
+
+
+        <div class="venture-logo">
+
+          <img
+            src="SERA_Logo.jpg"
+            alt="SERA Access logo"
+          />
+
+        </div>
+
+
+
+        <div class="venture-body">
+
+
+          <div class="venture-head">
+
+            <h3>
+              SERA
+            </h3>
+
+
+            <span class="venture-role">
+              Co-Founder
+            </span>
+
+          </div>
+
+
+
+          <p class="venture-tag">
+
+            Student Empowerment &amp; Resource Access
+            · EdTech · Tanzania
+
+          </p>
+
+
+
+          <p>
+
+            SERA is an
+
+            <strong>
+              EdTech platform
+            </strong>
+
+            I co-founded to help Tanzanian students
+            discover scholarships,
+            fellowships,
+            internships,
+            competitions,
+            mentorship,
+            and career-development opportunities.
+
+          </p>
+
+
+
+          <p>
+
+            The platform is designed to make opportunities
+            easier to understand by showing eligibility,
+            deadlines,
+            requirements,
+            and application guidance clearly.
+
+          </p>
+
+
+
+          <p>
+
+            Our long-term vision is to connect emerging African talent
+            with global education,
+            technology,
+            funding,
+            mentorship,
+            research,
+            and industrial opportunities.
+
+          </p>
+
+
+
+          <div class="venture-tags">
+
+            <span>
+              EdTech
+            </span>
+
+            <span>
+              Scholarships
+            </span>
+
+            <span>
+              Mentorship
+            </span>
+
+            <span>
+              Opportunity Access
+            </span>
+
+            <span>
+              Africa
+            </span>
+
+          </div>
+
+
+
+          <div class="venture-actions">
+
+
+            <a
+              href="https://www.seraaccess.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+            >
+
+              <i class="fas fa-external-link-alt"></i>
+
+              Visit SERA Access
+
+            </a>
+
+
+
+            <a
+              href="https://www.linkedin.com/company/sera-access/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline"
+            >
+
+              <i class="fab fa-linkedin-in"></i>
+
+              LinkedIn
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       PROJECTS
+       ============================================================ -->
+
+  <section id="projects">
+
+    <div class="container">
+
+
+      <div class="section-header reveal">
+
+        <span class="section-tag">
+          What I've Built
+        </span>
+
+
+        <h2 class="section-title">
+
+          Featured
+
+          <span class="accent">
+            Projects
+          </span>
+
+        </h2>
+
+      </div>
+
+
+
       <div class="projects-grid">
 
+
+        <!-- Digital Twin -->
+
         <div class="project-card reveal featured-project">
+
           <div class="project-card-inner">
+
+
             <div class="project-icon-wrap">
+
               <i class="fas fa-battery-full"></i>
+
             </div>
-            <div class="project-badge">Featured</div>
-            <h3>AI-Powered Digital Twin for Smart Battery Management</h3>
-            <p class="project-org">Alfred University · Renewable Microgrids</p>
-            <p class="project-desc">
-              Developed an AI-driven digital twin using Convolutional Neural Networks (CNNs) to predict battery
-              State of Health (SOH) and State of Charge (SOC). Integrated self-learning Battery Management Systems
-              (BMS) that improved battery efficiency by <strong>30%</strong> in microgrid applications.
-              Presented findings to GE Vernova, EDIBON, NYSEG, and EPRI at the AU Energy Conference 2025.
+
+
+            <div class="project-badge">
+              Featured
+            </div>
+
+
+            <h3>
+              AI-Powered Digital Twin for Smart Battery Management
+            </h3>
+
+
+            <p class="project-org">
+              Alfred University · Renewable Microgrids
             </p>
+
+
+            <p class="project-desc">
+
+              Developed an AI-driven digital twin using
+              Convolutional Neural Networks to predict
+              battery State of Health and State of Charge.
+
+              Investigated intelligent Battery Management Systems
+              for improving performance,
+              forecasting degradation,
+              and supporting renewable-energy microgrid applications.
+
+            </p>
+
+
             <div class="project-metrics">
-              <div class="metric"><span class="metric-val">30%</span><span class="metric-label">Efficiency Gain</span></div>
-              <div class="metric"><span class="metric-val">CNN</span><span class="metric-label">Model Used</span></div>
-              <div class="metric"><span class="metric-val">4</span><span class="metric-label">Industry Partners</span></div>
+
+              <div class="metric">
+
+                <span class="metric-val">
+                  CNN
+                </span>
+
+                <span class="metric-label">
+                  Model
+                </span>
+
+              </div>
+
+
+              <div class="metric">
+
+                <span class="metric-val">
+                  AI
+                </span>
+
+                <span class="metric-label">
+                  Digital Twin
+                </span>
+
+              </div>
+
             </div>
+
+
+
             <div class="project-tags">
-              <span>Python</span><span>CNN</span><span>Machine Learning</span><span>Digital Twin</span><span>Renewable Energy</span>
+
+              <span>Python</span>
+
+              <span>CNN</span>
+
+              <span>Machine Learning</span>
+
+              <span>Digital Twin</span>
+
+              <span>Renewable Energy</span>
+
+              <span>BMS</span>
+
             </div>
+
           </div>
+
         </div>
 
+
+
+        <!-- Battery Prediction -->
+
         <div class="project-card reveal">
+
           <div class="project-card-inner">
+
+
             <div class="project-icon-wrap">
+
               <i class="fas fa-chart-line"></i>
+
             </div>
-            <h3>Battery Life Prediction with Machine Learning</h3>
-            <p class="project-org">Alfred University · Aug 2025 – Dec 2025</p>
-            <p class="project-desc">
-              Benchmarked 14 machine learning models for battery State of Health (SOH) prediction. Identified CNN
-              as the top-performing approach with an <strong>RMSE of 0.085</strong> ; the lowest predictive error
-              among all models tested. Forecasted battery lifespan degradation patterns from multi-cycle battery data.
+
+
+            <h3>
+              Battery Life Prediction with Machine Learning
+            </h3>
+
+
+            <p class="project-org">
+              Alfred University · Aug 2025 – Dec 2025
             </p>
+
+
+            <p class="project-desc">
+
+              Benchmarked multiple machine-learning models
+              for battery State of Health prediction.
+
+              Compared model performance using predictive error
+              metrics and analyzed battery degradation
+              across charge-discharge cycles.
+
+            </p>
+
+
+
             <div class="project-metrics">
-              <div class="metric"><span class="metric-val">14</span><span class="metric-label">Models Tested</span></div>
-              <div class="metric"><span class="metric-val">0.085</span><span class="metric-label">Best RMSE</span></div>
+
+              <div class="metric">
+
+                <span class="metric-val">
+                  14
+                </span>
+
+                <span class="metric-label">
+                  Models Tested
+                </span>
+
+              </div>
+
+
+              <div class="metric">
+
+                <span class="metric-val">
+                  0.085
+                </span>
+
+                <span class="metric-label">
+                  Best RMSE
+                </span>
+
+              </div>
+
             </div>
+
+
+
             <div class="project-tags">
-              <span>Python</span><span>CNN</span><span>Google Colab</span><span>Data Analysis</span><span>ML</span>
+
+              <span>Python</span>
+
+              <span>CNN</span>
+
+              <span>Google Colab</span>
+
+              <span>Data Analysis</span>
+
+              <span>ML</span>
+
             </div>
+
           </div>
+
         </div>
 
+
+
+        <!-- Edge Vision Station -->
+
         <div class="project-card reveal">
+
           <div class="project-card-inner">
+
+
             <div class="project-icon-wrap">
+
+              <i class="fas fa-microchip"></i>
+
+            </div>
+
+
+            <h3>
+              ESP32 Edge Vision Station
+            </h3>
+
+
+            <p class="project-org">
+              Personal Embedded Systems Project
+            </p>
+
+
+            <p class="project-desc">
+
+              Developed an event-driven ESP32 embedded system
+              using ESP-IDF and FreeRTOS.
+
+              Integrated sensor monitoring,
+              GPIO interrupts,
+              event queues,
+              timestamped event logging,
+              and non-blocking firmware architecture
+              for edge sensing applications.
+
+            </p>
+
+
+
+            <div class="project-tags">
+
+              <span>C/C++</span>
+
+              <span>ESP32</span>
+
+              <span>ESP-IDF</span>
+
+              <span>FreeRTOS</span>
+
+              <span>Interrupts</span>
+
+              <span>GPIO</span>
+
+              <span>Embedded Systems</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Smart Switch -->
+
+        <div class="project-card reveal">
+
+          <div class="project-card-inner">
+
+
+            <div class="project-icon-wrap">
+
               <i class="fas fa-wifi"></i>
+
             </div>
-            <h3>Wi-Fi Smart Switch Using ESP32</h3>
-            <p class="project-org">Personal Project · Dec 2025</p>
-            <p class="project-desc">
-              Designed and built a functional ESP32-based Wi-Fi smart switch enabling full remote ON/OFF device
-              control from a mobile phone. Implemented embedded firmware in C/C++ using the Arduino framework
-              to host an HTTP server, translating mobile network requests into real-time hardware output responses.
+
+
+            <h3>
+              Wi-Fi Smart Switch Using ESP32
+            </h3>
+
+
+            <p class="project-org">
+              Personal Project · Dec 2025
             </p>
+
+
+            <p class="project-desc">
+
+              Designed and built an ESP32-based
+              Wi-Fi smart switch enabling remote
+              ON/OFF device control from a mobile device.
+
+              Implemented embedded firmware in C/C++
+              and hosted an HTTP server to translate
+              network requests into real-time hardware output.
+
+            </p>
+
+
+
             <div class="project-tags">
-              <span>C/C++</span><span>ESP32</span><span>Arduino</span><span>IoT</span><span>Embedded Systems</span>
+
+              <span>C/C++</span>
+
+              <span>ESP32</span>
+
+              <span>Arduino</span>
+
+              <span>IoT</span>
+
+              <span>Embedded Systems</span>
+
             </div>
+
           </div>
+
         </div>
 
+
+
+        <!-- Semiconductor Research -->
+
         <div class="project-card reveal">
+
           <div class="project-card-inner">
+
+
             <div class="project-icon-wrap">
+
               <i class="fas fa-atom"></i>
+
             </div>
-            <h3>Effect of Temperature on Organic Semiconductors</h3>
-            <p class="project-org">Knepp Lab, Alfred University · Jan 2026 – Present</p>
-            <p class="project-desc">
-              Investigates how temperature influences electronic coupling (V) in organic semiconductors using the
-              quasi-harmonic approximation (QHA). Research aims to understand potential applications in the
-              semiconductor industry using High-Performance Computing (HPC) on Linux systems.
+
+
+            <h3>
+              Effect of Temperature on Organic Semiconductors
+            </h3>
+
+
+            <p class="project-org">
+              Knepp Lab, Alfred University · Jan 2026 – Present
             </p>
+
+
+            <p class="project-desc">
+
+              Investigating how temperature influences
+              electronic coupling in organic semiconductors
+              using computational modeling and the
+              quasi-harmonic approximation.
+
+              Research uses high-performance computing
+              environments and computational-materials tools
+              to study semiconductor behavior.
+
+            </p>
+
+
+
             <div class="project-tags">
-              <span>Linux</span><span>HPC</span><span>CRYSTAL23</span><span>Computational Chemistry</span><span>QHA</span>
+
+              <span>Linux</span>
+
+              <span>HPC</span>
+
+              <span>CRYSTAL23</span>
+
+              <span>Computational Chemistry</span>
+
+              <span>QHA</span>
+
+              <span>Semiconductors</span>
+
             </div>
+
           </div>
+
         </div>
 
+
+
+        <!-- EV -->
+
         <div class="project-card reveal">
+
           <div class="project-card-inner">
+
+
             <div class="project-icon-wrap">
+
               <i class="fas fa-car-battery"></i>
+
             </div>
-            <h3>Electric Vehicle Engine Conversion</h3>
-            <p class="project-org">STEP-LAB, Alfred University · Sep 2025 – Present</p>
-            <p class="project-desc">
-              Led the EV Club's engine conversion project, replacing a combustion engine with a fully integrated
-              EV drivetrain. Extended vehicle range by <strong>25+ miles</strong>, cut operational costs significantly,
-              and achieved zero direct emissions with a <strong>35% reduction</strong> in noise and air pollution.
+
+
+            <h3>
+              Electric Vehicle Engine Conversion
+            </h3>
+
+
+            <p class="project-org">
+              STEP-LAB, Alfred University · Sep 2025 – Present
             </p>
-            <div class="project-metrics">
-              <div class="metric"><span class="metric-val">25+</span><span class="metric-label">Miles Extended</span></div>
-              <div class="metric"><span class="metric-val">35%</span><span class="metric-label">Pollution Reduced</span></div>
-            </div>
+
+
+            <p class="project-desc">
+
+              Contributed to an engineering project
+              replacing a combustion powertrain
+              with an electric drivetrain.
+
+              Supported prototype design,
+              component development,
+              system integration,
+              and engineering analysis.
+
+            </p>
+
+
+
             <div class="project-tags">
-              <span>EV Systems</span><span>SolidWorks</span><span>Mechanical Engineering</span><span>Sustainability</span>
+
+              <span>EV Systems</span>
+
+              <span>SolidWorks</span>
+
+              <span>Engineering Design</span>
+
+              <span>Electrification</span>
+
+              <span>Sustainability</span>
+
             </div>
+
           </div>
+
         </div>
 
+
+
+        <!-- GE Aerospace -->
+
         <div class="project-card reveal">
+
           <div class="project-card-inner">
+
+
             <div class="project-icon-wrap">
+
               <i class="fas fa-plane"></i>
+
             </div>
-            <h3>GE Aerospace Electrical Engineering Simulation</h3>
-            <p class="project-org">Forage · Nov 2025 – Dec 2025</p>
-            <p class="project-desc">
-              Acquired technical proficiency in electrical distribution planning and design using AutoCAD, circuit
-              breaker selection, and compliance with FAA and EASA Aerospace standards. Employed simulation
-              software for environmental impact assessment of avionics systems.
+
+
+            <h3>
+              GE Aerospace Electrical Engineering Simulation
+            </h3>
+
+
+            <p class="project-org">
+              Forage · Nov 2025 – Dec 2025
             </p>
+
+
+            <p class="project-desc">
+
+              Applied electrical-distribution planning,
+              AutoCAD,
+              circuit-breaker selection,
+              and aerospace engineering standards
+              within a simulated electrical engineering environment.
+
+            </p>
+
+
+
             <div class="project-tags">
-              <span>AutoCAD</span><span>FAA Standards</span><span>EASA</span><span>Avionics</span><span>Circuit Design</span>
+
+              <span>AutoCAD</span>
+
+              <span>FAA Standards</span>
+
+              <span>EASA</span>
+
+              <span>Avionics</span>
+
+              <span>Circuit Design</span>
+
             </div>
+
           </div>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
-  <!-- ========== CONTACT ========== -->
+
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+
   <section id="contact">
+
     <div class="container">
+
+
       <div class="section-header reveal">
-        <span class="section-tag">Let's Connect</span>
-        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+
+        <span class="section-tag">
+          Let's Connect
+        </span>
+
+
+        <h2 class="section-title">
+
+          Get In
+
+          <span class="accent">
+            Touch
+          </span>
+
+        </h2>
+
       </div>
+
+
+
       <div class="contact-grid">
+
+
+        <!-- Contact Information -->
+
         <div class="contact-info reveal">
+
+
           <p class="contact-intro">
-            I'm actively seeking internship and job opportunities, research collaborations, and exciting engineering
-            challenges. Whether you have a project in mind or just want to connect my inbox is always open!
+
+            I'm actively seeking internship opportunities,
+            engineering collaborations,
+            research opportunities,
+            hackathons,
+            and technically challenging projects.
+
+            If you have an opportunity,
+            project,
+            or idea worth building,
+            feel free to reach out.
+
           </p>
+
+
+
           <div class="contact-cards">
-            <a href="mailto:johnsonjasson01@gmail.com" class="contact-card">
-              <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
-              <div class="contact-card-info">
-                <span class="contact-card-label">Email</span>
-                <span class="contact-card-value">johnsonjasson01@gmail.com</span>
+
+
+            <!-- Email -->
+
+            <a
+              href="mailto:johnsonjasson01@gmail.com"
+              class="contact-card"
+            >
+
+
+              <div class="contact-card-icon">
+
+                <i class="fas fa-envelope"></i>
+
               </div>
+
+
+              <div class="contact-card-info">
+
+                <span class="contact-card-label">
+                  Email
+                </span>
+
+
+                <span class="contact-card-value">
+                  johnsonjasson01@gmail.com
+                </span>
+
+              </div>
+
+
               <i class="fas fa-arrow-right contact-card-arrow"></i>
+
             </a>
-           <!-- <a href="tel:+16074541964" class="contact-card">
-              <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
-              <div class="contact-card-info">
-                <span class="contact-card-label">Phone</span>
-                <span class="contact-card-value">+1 (607) 454-1964</span>
+
+
+
+            <!-- LinkedIn -->
+
+            <a
+              href="https://www.linkedin.com/in/johnson-jasson"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card"
+            >
+
+
+              <div class="contact-card-icon">
+
+                <i class="fab fa-linkedin-in"></i>
+
               </div>
-              <i class="fas fa-arrow-right contact-card-arrow"></i>
-            </a> -->
-            <a href="https://www.linkedin.com/in/johnson-jasson" target="_blank" rel="noopener" class="contact-card">
-              <div class="contact-card-icon"><i class="fab fa-linkedin-in"></i></div>
+
+
               <div class="contact-card-info">
-                <span class="contact-card-label">LinkedIn</span>
-                <span class="contact-card-value">linkedin.com/in/johnson-jasson</span>
+
+                <span class="contact-card-label">
+                  LinkedIn
+                </span>
+
+
+                <span class="contact-card-value">
+                  linkedin.com/in/johnson-jasson
+                </span>
+
               </div>
+
+
               <i class="fas fa-arrow-right contact-card-arrow"></i>
+
             </a>
-            <a href="https://github.com/Jhoncho517" target="_blank" rel="noopener" class="contact-card">
-              <div class="contact-card-icon"><i class="fab fa-github"></i></div>
-              <div class="contact-card-info">
-                <span class="contact-card-label">GitHub</span>
-                <span class="contact-card-value">github.com/Jhoncho517</span>
+
+
+
+            <!-- GitHub -->
+
+            <a
+              href="https://github.com/Jhoncho517"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card"
+            >
+
+
+              <div class="contact-card-icon">
+
+                <i class="fab fa-github"></i>
+
               </div>
+
+
+              <div class="contact-card-info">
+
+                <span class="contact-card-label">
+                  GitHub
+                </span>
+
+
+                <span class="contact-card-value">
+                  github.com/Jhoncho517
+                </span>
+
+              </div>
+
+
               <i class="fas fa-arrow-right contact-card-arrow"></i>
+
             </a>
+
+
+
+            <!-- Location -->
+
             <div class="contact-card no-link">
-              <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
-              <div class="contact-card-info">
-                <span class="contact-card-label">Location</span>
-                <span class="contact-card-value">Alfred, New York, USA</span>
+
+
+              <div class="contact-card-icon">
+
+                <i class="fas fa-map-marker-alt"></i>
+
               </div>
+
+
+              <div class="contact-card-info">
+
+                <span class="contact-card-label">
+                  Location
+                </span>
+
+
+                <span class="contact-card-value">
+                  Alfred, New York, USA
+                </span>
+
+              </div>
+
             </div>
+
           </div>
+
         </div>
+
+
+
+        <!-- Contact Form -->
 
         <div class="contact-form-wrap reveal">
-          <form class="contact-form" id="contactForm">
+
+
+          <form
+            class="contact-form"
+            id="contactForm"
+          >
+
+
             <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="Hello Dear" required />
+
+              <label for="name">
+                Your Name
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+
             </div>
+
+
+
             <div class="form-group">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" name="email" placeholder="hellodear@example.com" required />
+
+              <label for="email">
+                Your Email
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+
             </div>
+
+
+
             <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="Internship Opportunity / Collaboration" required />
+
+              <label for="subject">
+                Subject
+              </label>
+
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Internship Opportunity / Collaboration"
+                required
+              />
+
             </div>
+
+
+
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+
+              <label for="message">
+                Message
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell me about your opportunity, project, or idea..."
+                required
+              ></textarea>
+
             </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              <i class="fas fa-paper-plane"></i> Send Message
+
+
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-full"
+            >
+
+              <i class="fas fa-paper-plane"></i>
+
+              Send Message
+
             </button>
-            <p class="form-note">* This form will open your default email client.</p>
+
+
+
+            <p class="form-note">
+
+              This form will open your default email client.
+
+            </p>
+
           </form>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
+
+
+  <!-- ============================================================
+       ASPIRED COMPANIES
+       ============================================================ -->
+
   <section id="companies">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Where I'm Headed</span>
-      <h2 class="section-title"><span class="accent">Aspired Companies</span></h2>
+
+    <div class="container">
+
+
+      <div class="section-header reveal">
+
+        <span class="section-tag">
+          Where I'm Headed
+        </span>
+
+
+        <h2 class="section-title">
+
+          <span class="accent">
+            Aspired Companies
+          </span>
+
+        </h2>
+
+      </div>
+
     </div>
-  </div>
 
-  <div class="marquee" aria-label="Companies I'd love to work with">
-    <div class="marquee-track" id="logoTrack">
-    <a class="logo-item" href="https://www.nvidia.com" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/nvidia/ffffff" alt="NVIDIA" /></a>
-    <a class="logo-item" href="https://www.tesla.com" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/tesla/ffffff" alt="Tesla" /></a>
-    <a class="logo-item logo-text" href="https://www.microsoft.com" target="_blank" rel="noopener">MICROSOFT</a>
-    <a class="logo-item logo-text" href="https://www.ti.com" target="_blank" rel="noopener">TEXAS INSTRUMENTS</a>
-    <a class="logo-item" href="https://www.google.com" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/google/ffffff" alt="Google" /></a>
-    <a class="logo-item" href="https://www.spacex.com" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/spacex/ffffff" alt="SpaceX" /></a>
-    <a class="logo-item" href="https://www.amd.com" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/amd/ffffff" alt="AMD" /></a>
-    <a class="logo-item" href="https://www.samsung.com" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/samsung/ffffff" alt="Samsung" /></a>
-    <a class="logo-item" href="https://www.intel.com" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/intel/ffffff" alt="Intel" /></a>
-    <a class="logo-item" href="https://www.ycombinator.com" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/ycombinator/ffffff" alt="Y Combinator" /></a>
-    <a class="logo-item" href="https://www.broadcom.com" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/broadcom/ffffff" alt="Broadcom" /></a>
-  </div>
-</div>
 
-  <script>
-    (function () {
-      var track = document.getElementById('logoTrack');
-      if (track) { track.innerHTML += track.innerHTML; }
-    })();
-  </script>
-</section>
 
-  <!-- ========== FOOTER ========== -->
+    <div
+      class="marquee"
+      aria-label="Companies I aspire to work with"
+    >
+
+
+      <div
+        class="marquee-track"
+        id="logoTrack"
+      >
+
+
+        <a
+          class="logo-item"
+          href="https://www.nvidia.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <img
+            src="https://cdn.simpleicons.org/nvidia/ffffff"
+            alt="NVIDIA"
+          />
+
+        </a>
+
+
+
+        <a
+          class="logo-item"
+          href="https://www.tesla.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <img
+            src="https://cdn.simpleicons.org/tesla/ffffff"
+            alt="Tesla"
+          />
+
+        </a>
+
+
+
+        <a
+          class="logo-item logo-text"
+          href="https://www.microsoft.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          MICROSOFT
+        </a>
+
+
+
+        <a
+          class="logo-item logo-text"
+          href="https://www.ti.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TEXAS INSTRUMENTS
+        </a>
+
+
+
+        <a
+          class="logo-item"
+          href="https://www.google.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <img
+            src="https://cdn.simpleicons.org/google/ffffff"
+            alt="Google"
+          />
+
+        </a>
+
+
+
+        <a
+          class="logo-item"
+          href="https://www.spacex.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <img
+            src="https://cdn.simpleicons.org/spacex/ffffff"
+            alt="SpaceX"
+          />
+
+        </a>
+
+
+
+        <a
+          class="logo-item"
+          href="https://www.amd.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <img
+            src="https://cdn.simpleicons.org/amd/ffffff"
+            alt="AMD"
+          />
+
+        </a>
+
+
+
+        <a
+          class="logo-item"
+          href="https://www.samsung.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <img
+            src="https://cdn.simpleicons.org/samsung/ffffff"
+            alt="Samsung"
+          />
+
+        </a>
+
+
+
+        <a
+          class="logo-item"
+          href="https://www.intel.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <img
+            src="https://cdn.simpleicons.org/intel/ffffff"
+            alt="Intel"
+          />
+
+        </a>
+
+
+
+        <a
+          class="logo-item"
+          href="https://www.ycombinator.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <img
+            src="https://cdn.simpleicons.org/ycombinator/ffffff"
+            alt="Y Combinator"
+          />
+
+        </a>
+
+
+
+        <a
+          class="logo-item"
+          href="https://www.broadcom.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <img
+            src="https://cdn.simpleicons.org/broadcom/ffffff"
+            alt="Broadcom"
+          />
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+
   <footer id="footer">
+
     <div class="footer-container">
+
+
       <div class="footer-top">
-        <a href="#hero" class="footer-logo">JJJ</a>
-        <p class="footer-tagline">Building the future, one circuit at a time.</p>
+
+
+        <a
+          href="#hero"
+          class="footer-logo"
+        >
+          JJJ
+        </a>
+
+
+        <p class="footer-tagline">
+
+          Building the future,
+          one circuit at a time.
+
+        </p>
+
+
+
         <div class="footer-socials">
-          <a href="https://www.linkedin.com/in/johnson-jasson" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/Jhoncho517" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="mailto:johnsonjasson01@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-          <!-- <a href="tel:+16074541964" aria-label="Phone"><i class="fas fa-phone"></i></a> -->
+
+
+          <a
+            href="https://www.linkedin.com/in/johnson-jasson"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+
+            <i class="fab fa-linkedin-in"></i>
+
+          </a>
+
+
+
+          <a
+            href="https://github.com/Jhoncho517"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+
+            <i class="fab fa-github"></i>
+
+          </a>
+
+
+
+          <a
+            href="mailto:johnsonjasson01@gmail.com"
+            aria-label="Email"
+          >
+
+            <i class="fas fa-envelope"></i>
+
+          </a>
+
+
         </div>
+
       </div>
+
+
+
       <div class="footer-nav">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#experience">
+          Experience
+        </a>
+
+        <a href="#skills">
+          Skills
+        </a>
+
+        <a href="#projects">
+          Projects
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
       </div>
+
+
+
       <div class="footer-bottom">
-        <p>&copy; 2026 Johnson J. Jasson. All rights reserved.</p>
-        <p>Designed &amp; Built with <span class="heart">&lt;/&gt;</span> by Johnson J. Jasson</p>
+
+
+        <p>
+          &copy; 2026 Johnson J. Jasson.
+          All rights reserved.
+        </p>
+
+
+        <p>
+
+          Designed &amp; Built with
+
+          <span class="heart">
+            &lt;/&gt;
+          </span>
+
+          by Johnson J. Jasson
+
+        </p>
+
       </div>
+
     </div>
+
   </footer>
 
-  <!-- Back to Top -->
-  <button id="backToTop" aria-label="Back to top">
+
+
+  <!-- ============================================================
+       BACK TO TOP
+       ============================================================ -->
+
+  <button
+    id="backToTop"
+    aria-label="Back to top"
+  >
+
     <i class="fas fa-chevron-up"></i>
+
   </button>
+
+
+
+  <!-- ============================================================
+       JBOT
+       ============================================================ -->
+
+  <div id="jbot">
+
+
+    <!-- Open Button -->
+
+    <button
+      id="jbot-toggle"
+      aria-label="Chat with Jbot"
+    >
+
+      <i class="fas fa-robot"></i>
+
+      <span>
+        Chat with Jbot
+      </span>
+
+    </button>
+
+
+
+    <!-- Chat Window -->
+
+    <div
+      id="jbot-window"
+      class="jbot-hidden"
+      role="dialog"
+      aria-label="Chat with Jbot"
+    >
+
+
+      <div class="jbot-header">
+
+
+        <div class="jbot-id">
+
+
+          <span class="jbot-avatar">
+
+            <i class="fas fa-robot"></i>
+
+          </span>
+
+
+          <div>
+
+            <strong>
+              Jbot
+            </strong>
+
+            <small>
+              Ask me about Johnson
+            </small>
+
+          </div>
+
+        </div>
+
+
+
+        <button
+          id="jbot-close"
+          aria-label="Close chat"
+        >
+
+          <i class="fas fa-times"></i>
+
+        </button>
+
+      </div>
+
+
+
+      <!-- Chat Messages -->
+
+      <div
+        id="jbot-messages"
+        class="jbot-messages"
+      ></div>
+
+
+
+      <!-- Suggested Questions -->
+
+      <div
+        class="jbot-chips"
+        id="jbot-chips"
+      >
+
+        <button>
+          Education
+        </button>
+
+        <button>
+          Skills
+        </button>
+
+        <button>
+          Projects
+        </button>
+
+        <button>
+          Experience
+        </button>
+
+        <button>
+          SERA Access
+        </button>
+
+        <button>
+          Contact
+        </button>
+
+      </div>
+
+
+
+      <!-- Chat Input -->
+
+      <div class="jbot-input">
+
+
+        <input
+          type="text"
+          id="jbot-text"
+          placeholder="Ask about Johnson..."
+          autocomplete="off"
+        />
+
+
+        <button
+          id="jbot-send"
+          aria-label="Send"
+        >
+
+          <i class="fas fa-paper-plane"></i>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
 
   <script src="script.js"></script>
-  <!-- ===== JBOT ===== -->
-<div id="jbot">
-  <button id="jbot-toggle" aria-label="Chat with Jbot">
-    <i class="fas fa-robot"></i>
-    <span>Chat with Jbot</span>
-  </button>
 
-  <div id="jbot-window" class="jbot-hidden" role="dialog" aria-label="Chat with Jbot">
-    <div class="jbot-header">
-      <div class="jbot-id">
-        <span class="jbot-avatar"><i class="fas fa-robot"></i></span>
-        <div>
-          <strong>Jbot</strong>
-          <small>Ask me about Johnson</small>
-        </div>
-      </div>
-      <button id="jbot-close" aria-label="Close chat"><i class="fas fa-times"></i></button>
-    </div>
 
-    <div id="jbot-messages" class="jbot-messages"></div>
 
-    <div class="jbot-chips" id="jbot-chips">
-      <button>Education</button>
-      <button>Skills</button>
-      <button>Projects</button>
-      <button>Experience</button>
-      <button>SERA Access</button>
-      <button>Contact</button>
-    </div>
+  <!-- Duplicate company logos for infinite marquee -->
 
-    <div class="jbot-input">
-      <input type="text" id="jbot-text" placeholder="Ask about Johnson..." autocomplete="off" />
-      <button id="jbot-send" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
-    </div>
-  </div>
-</div>
-  
+  <script>
+
+    (function () {
+
+      const track =
+        document.getElementById("logoTrack");
+
+      if (track) {
+
+        track.innerHTML += track.innerHTML;
+
+      }
+
+    })();
+
+  </script>
+
+
 </body>
+
 </html>
