@@ -4153,3 +4153,84 @@ h1, h2, h3, h4,
   object-fit: contain;
   background: #e0e0e0;
 }
+
+
+/* ============================================================
+   LIGHT SECTIONS — lighter grey background so navy headings read
+   (variables are re-declared per section; the hero keeps the dark set)
+   ============================================================ */
+
+section:not(#hero),
+footer {
+  --heading: #01257D;
+
+  --navy: #cfd1d5;
+  --navy-dark: #dcdee1;
+  --navy-mid: #e6e8ea;
+  --navy-light: #bfc2c7;
+
+  --white: #1d2129;
+  --off-white: #2b3039;
+  --text-muted: #555b66;
+
+  --cyan: #5d626b;
+  --cyan-dim: rgba(0, 0, 0, 0.06);
+  --cyan-glow: rgba(0, 0, 0, 0.15);
+
+  --card-bg: rgba(255, 255, 255, 0.78);
+  --card-border: rgba(0, 0, 0, 0.12);
+  --glass: rgba(255, 255, 255, 0.5);
+
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  --shadow-cyan: 0 0 0 rgba(0, 0, 0, 0);
+
+  background-color: var(--navy-dark);
+  color: var(--off-white);
+}
+
+section:not(#hero) .btn-primary {
+  background: #3a3d44;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+section:not(#hero) .btn-outline {
+  color: #3a3d44;
+  border-color: #3a3d44;
+}
+
+section:not(#hero) .timeline-card.featured-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(0, 0, 0, 0.14);
+}
+
+section:not(#hero) .venture-tags span {
+  color: #3a3d44;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+section:not(#hero) .venture-card,
+section:not(#hero) .skills-extra {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.skills-extra a,
+.skills-extra span,
+.skills-extra p {
+  color: var(--off-white);
+}
+
+section:not(#hero) .form-group input,
+section:not(#hero) .form-group textarea,
+section:not(#hero) input,
+section:not(#hero) textarea {
+  background: #ffffff;
+  color: #1d2129;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+section:not(#hero) input::placeholder,
+section:not(#hero) textarea::placeholder {
+  color: #7b808a;
+  opacity: 1;
+}
