@@ -398,7 +398,7 @@ window.addEventListener('load', () => {
       a: "You can download Johnson's resume here: <a href='Johnson_Jasson_Resume.pdf' target='_blank' rel='noopener noreferrer'>Johnson_Jasson_Resume.pdf</a>." },
 
     { k: ["contact","email","reach","hire","connect","linkedin","github","get in touch"],
-      a: "You can reach Johnson at <a href='mailto:johnsonjasson01@gmail.com'>johnsonjasson01@gmail.com</a>, or find him on <a href='https://www.linkedin.com/in/johnson-jasson' target='_blank' rel='noopener noreferrer'>LinkedIn</a> and <a href='https://github.com/Jhoncho517' target='_blank' rel='noopener noreferrer'>GitHub</a>. He's seeking Summer 2027 internships in hardware engineering, semiconductors, and embedded systems." },
+      a: "You can reach Johnson at <a href='mailto:johnsonjasson01@gmail.com'>johnsonjasson01@gmail.com</a>, or find him on <a href='https://www.linkedin.com/in/johnson-jasson' target='_blank' rel='noopener noreferrer'>LinkedIn</a> and <a href='https://github.com/Jhoncho517' target='_blank' rel='noopener noreferrer'>GitHub</a>." },
 
     { k: ["who","about","yourself","introduce","summary","tell me about"],
       a: "Johnson Jasson is a first-generation Electrical & Electronics Engineering and Mathematics student at Alfred University (4.00 GPA). He builds where hardware meets software: embedded firmware, semiconductor device modeling, and applied AI/ML. <a href='#about'>See About</a>." },
