@@ -16,6 +16,7 @@
   --navy-light: #5a5a5e;
 
   --cyan: #b8bbc0;
+  --heading: #01257D;
   --cyan-dim: rgba(184, 187, 192, 0.15);
   --cyan-glow: rgba(184, 187, 192, 0.4);
 
@@ -117,8 +118,8 @@ button {
    ============================================================ */
 
 ::selection {
-  background: var(--cyan);
-  color: var(--navy-dark);
+  background: #ffffff;
+  color: #1a1a1c;
 }
 
 
@@ -183,7 +184,7 @@ section {
 
   font-weight: 800;
 
-  color: var(--white);
+  color: var(--heading);
 
   line-height: 1.2;
 }
@@ -251,8 +252,8 @@ section {
   background:
     linear-gradient(
       135deg,
-      var(--cyan) 0%,
-      #00c8ff 100%
+      #d4d6da 0%,
+      #b8bbc0 100%
     );
 
   color: var(--navy-dark);
@@ -4020,4 +4021,59 @@ section {
     height: 44px;
     padding: 0;
   }
+}
+
+
+/* ============================================================
+   HEADINGS — NAVY, CARD PHOTOS
+   ============================================================ */
+
+h1, h2, h3, h4,
+.section-title, .section-title .accent,
+#hero .hero-name, #hero .hero-last-name,
+.about-text h3, .about-text h3 .accent,
+.tc-header h3, .tc-header h4, .tc-header h4 a,
+.skill-category h3, .venture-head h3, .venture-head h3 a,
+.project-card h3 {
+  color: var(--heading);
+}
+
+::-moz-selection {
+  background: #ffffff;
+  color: #1a1a1c;
+}
+
+#hero .hero-name {
+  text-shadow:
+    0 0 2px rgba(255, 255, 255, 0.55),
+    0 2px 14px rgba(255, 255, 255, 0.25);
+}
+
+.card-photo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.card-photos {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.card-photos img {
+  flex: 1 1 0;
+  min-width: 0;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .card-photos { flex-direction: column; }
+  .card-photos img { max-height: 320px; }
 }

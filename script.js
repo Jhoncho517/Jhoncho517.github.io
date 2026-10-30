@@ -380,7 +380,7 @@ window.addEventListener('load', () => {
       a: "Johnson works in C/C++ (ESP-IDF, FreeRTOS), Python, and MATLAB; uses lab instruments like oscilloscopes and multimeters; models devices with Monte Carlo methods, DFT, and Linux HPC; and builds ML models with scikit-learn and TensorFlow. <a href='#skills'>See Skills</a>." },
 
     { k: ["project","projects","built","build","switch","esp32","edge vision","battery","embedded"],
-      a: "Johnson's projects include an ESP32 Wi-Fi Smart Switch (completed), the Edge Vision Sensing Platform (in progress: ESP32, FreeRTOS, multi-sensor firmware), and battery health prediction with machine learning as course research and a poster presentation (14 models benchmarked, best RMSE 0.085). <a href='#projects'>See Projects</a>." },
+      a: "Johnson's projects include an ESP32 Wi-Fi Smart Switch (completed), the Edge Vision Sensing Platform (in progress: ESP32, FreeRTOS, multi-sensor firmware), and battery health prediction with machine learning as course research and a poster presentation. <a href='#projects'>See Projects</a>." },
 
     { k: ["experience","intern","internship","job","worked","work","tanesco","career","step-lab"],
       a: "Johnson modeled HfO₂ ferroelectric transistors for neuromorphic memory in summer research (May – Jul 2026), was a Computational Chemistry Research Assistant at the Knepp Lab (Jan – May 2026), and interned in Electrical Engineering at TANESCO in Tanzania (Jul – Sep 2024), where he diagnosed a 0.80 power factor and recommended a capacitor-bank fix. <a href='#experience'>See Experience</a>." },
@@ -404,7 +404,7 @@ window.addEventListener('load', () => {
       a: "Johnson Jasson is a first-generation Electrical & Electronics Engineering and Mathematics student at Alfred University (4.00 GPA). He builds where hardware meets software: embedded firmware, semiconductor device modeling, and applied AI/ML. <a href='#about'>See About</a>." },
 
     { k: ["ai","machine learning","ml","neural","deep learning","cnn"],
-      a: "Johnson built CNN-based battery health models as course research, benchmarking 14 models, and is completing Cornell's Break Through Tech AI Program, covering logistic regression, KNN, deep neural networks, NLP, TensorFlow, and scikit-learn." }
+      a: "Johnson built CNN-based battery health models as course research, and is completing Cornell's Break Through Tech AI Program, covering logistic regression, KNN, deep neural networks, NLP, TensorFlow, and scikit-learn." }
   ];
 
   var GREETINGS = ["hi","hello","hey","yo","hola","greetings","sup"];
