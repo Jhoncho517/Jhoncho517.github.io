@@ -4234,3 +4234,56 @@ section:not(#hero) textarea::placeholder {
   color: #7b808a;
   opacity: 1;
 }
+
+/* ============================================================
+   UNIFORM GREY CHIPS / BOXES
+   Every tag, date pill, label and note box shares one grey style.
+   ============================================================ */
+
+section:not(#hero) {
+  --chip-bg: #e3e5e8;
+  --chip-border: #aeb2b9;
+  --chip-text: #23272f;
+}
+
+section:not(#hero) .project-tags span,
+section:not(#hero) .tc-tags span,
+section:not(#hero) .skill-tags span,
+section:not(#hero) .venture-tags span,
+section:not(#hero) .tc-date,
+section:not(#hero) .timeline-group-label,
+section:not(#hero) .project-status,
+section:not(#hero) .skill-cat-icon,
+section:not(#hero) .project-icon-wrap {
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  color: var(--chip-text);
+}
+
+section:not(#hero) .project-tags span,
+section:not(#hero) .tc-tags span,
+section:not(#hero) .skill-tags span,
+section:not(#hero) .venture-tags span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+section:not(#hero) .tc-courses {
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  border-left: 3px solid #5d626b;
+  color: var(--chip-text);
+}
+
+section:not(#hero) .tc-courses strong {
+  color: #1d2129;
+}
+
+section:not(#hero) .project-card:hover .project-tags span,
+section:not(#hero) .skill-tags span:hover {
+  background: var(--chip-bg);
+  border-color: var(--chip-border);
+  color: var(--chip-text);
+}
