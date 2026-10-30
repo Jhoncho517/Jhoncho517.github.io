@@ -312,29 +312,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 /* ============================================================
-   13. CARD TILT EFFECT — subtle 3D on project and skill cards
-   ============================================================ */
-document.querySelectorAll('.project-card, .skill-category').forEach(card => {
-  card.addEventListener('mousemove', (e) => {
-    const rect    = card.getBoundingClientRect();
-    const x       = e.clientX - rect.left;
-    const y       = e.clientY - rect.top;
-    const cx      = rect.width  / 2;
-    const cy      = rect.height / 2;
-    const rotateX = ((y - cy) / cy) * -5;
-    const rotateY = ((x - cx) / cx) *  5;
-
-    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-  });
-
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
-    card.style.transition = 'transform 0.5s ease';
-    setTimeout(() => { card.style.transition = ''; }, 500);
-  });
-});
-
-/* ============================================================
    14. CURSOR GLOW EFFECT (desktop only)
    ============================================================ */
 if (window.matchMedia('(pointer: fine)').matches) {
@@ -344,7 +321,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
     width:         '300px',
     height:        '300px',
     borderRadius:  '50%',
-    background:    'radial-gradient(circle, rgba(0,255,255,0.06) 0%, transparent 70%)',
+    background:    'radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%)',
     pointerEvents: 'none',
     zIndex:        '0',
     transform:     'translate(-50%, -50%)',

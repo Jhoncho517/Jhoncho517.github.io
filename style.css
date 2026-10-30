@@ -1599,7 +1599,7 @@ section {
   display: grid;
 
   grid-template-columns:
-    repeat(3, 1fr);
+    repeat(2, 1fr);
 
   gap: 24px;
 }
@@ -4076,4 +4076,73 @@ h1, h2, h3, h4,
 @media (max-width: 600px) {
   .card-photos { flex-direction: column; }
   .card-photos img { max-height: 320px; }
+}
+
+
+/* ============================================================
+   STATIC CARDS — no reveal, hover or tilt animation
+   ============================================================ */
+
+.reveal,
+.reveal.visible {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.project-card, .project-card:hover,
+.skill-category, .skill-category:hover,
+.timeline-card, .timeline-card:hover,
+.venture-card, .venture-card:hover,
+.stat-card, .stat-card:hover,
+.stat-item, .stat-item:hover,
+.contact-card, .contact-card:hover,
+.gallery-item, .gallery-item:hover {
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+.project-card:hover,
+.skill-category:hover,
+.timeline-card:hover,
+.venture-card:hover {
+  box-shadow: none;
+}
+
+.skill-sub {
+  margin: 18px 0 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.skill-category .skill-cat-icon + h3 + .skill-sub {
+  margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ---------- Organisation logos (LinkedIn-style) ---------- */
+.tc-header .org-logo {
+  width: 56px;
+  height: 56px;
+  flex: none;
+  margin-right: 16px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #ffffff;
+}
+
+.tc-header .org-logo + div {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .tc-header .org-logo { width: 44px; height: 44px; margin-right: 12px; }
 }
