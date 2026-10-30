@@ -16,7 +16,7 @@
   --navy-light: #5a5a5e;
 
   --cyan: #b8bbc0;
-  --heading: #01257D;
+  --heading: #ffffff;
   --cyan-dim: rgba(184, 187, 192, 0.15);
   --cyan-glow: rgba(184, 187, 192, 0.4);
 
@@ -4045,8 +4045,8 @@ h1, h2, h3, h4,
 
 #hero .hero-name {
   text-shadow:
-    0 0 2px rgba(255, 255, 255, 0.55),
-    0 2px 14px rgba(255, 255, 255, 0.25);
+    0 4px 18px rgba(0, 0, 0, 0.50),
+    0 10px 40px rgba(0, 0, 0, 0.35);
 }
 
 .card-photo {
