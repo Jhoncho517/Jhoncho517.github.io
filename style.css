@@ -4146,3 +4146,10 @@ h1, h2, h3, h4,
 @media (max-width: 600px) {
   .tc-header .org-logo { width: 44px; height: 44px; margin-right: 12px; }
 }
+
+.card-photo-diagram {
+  aspect-ratio: auto;
+  max-height: 280px;
+  object-fit: contain;
+  background: #e0e0e0;
+}
