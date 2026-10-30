@@ -4314,3 +4314,32 @@ section:not(#hero) .skill-tags span:hover {
 @media (max-width: 640px) {
   #contact .contact-cards { grid-template-columns: 1fr; }
 }
+
+/* ---------- Gallery dropdown ---------- */
+.gallery-dropdown > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 0;
+  user-select: none;
+}
+
+.gallery-dropdown > summary::-webkit-details-marker {
+  display: none;
+}
+
+.gallery-arrow {
+  font-size: 1.4rem;
+  color: var(--heading);
+}
+
+.gallery-dropdown[open] > summary {
+  margin-bottom: 40px;
+}
+
+.gallery-dropdown[open] .gallery-arrow {
+  transform: rotate(180deg);
+}

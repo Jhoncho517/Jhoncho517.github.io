@@ -442,3 +442,16 @@ window.addEventListener('load', () => {
     });
   });
 })();
+
+/* ============================================================
+   16. GALLERY DROPDOWN — open when a #gallery link is used
+   ============================================================ */
+(function () {
+  const dd = document.querySelector('.gallery-dropdown');
+  if (!dd) return;
+  const openIfGallery = () => { if (location.hash === '#gallery') dd.open = true; };
+  document.querySelectorAll('a[href="#gallery"]').forEach(a =>
+    a.addEventListener('click', () => { dd.open = true; }));
+  window.addEventListener('hashchange', openIfGallery);
+  openIfGallery();
+})();
