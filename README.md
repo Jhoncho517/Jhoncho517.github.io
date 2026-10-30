@@ -1,4 +1,4 @@
-# Johnson Jasson — Portfolio
+# Portfolio
 
 My personal portfolio website: [jhoncho517.github.io](https://jhoncho517.github.io/)
 
