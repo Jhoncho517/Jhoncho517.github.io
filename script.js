@@ -1,7 +1,7 @@
 /* ============================================================
-   JOHNSON J. JASSON — PORTFOLIO SCRIPT
-   Features: Particles, Typed text, Scroll reveal, Skill bars,
-             Nav highlight, Mobile menu, Back-to-top, Contact form
+   JOHNSON JASSON — PORTFOLIO SCRIPT
+   Features: Typed text, Scroll reveal, Nav highlight, Mobile menu,
+             Back-to-top, Contact form (email draft), Copy email, Jbot
    ============================================================ */
 
 'use strict';
@@ -10,81 +10,35 @@
    1. DOM READY
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
-  initParticles();
   initTyped();
   initNavbar();
   initMobileMenu();
   initScrollReveal();
-  initSkillBars();
   initActiveNavLinks();
   initBackToTop();
   initContactForm();
+  initCopyEmail();
   initHeroReveal();
 });
 
 /* ============================================================
-   2. PARTICLES
-   ============================================================ */
-function initParticles() {
-  const container = document.getElementById('particles');
-  if (!container) return;
-
-  const COUNT = 35;
-
-  for (let i = 0; i < COUNT; i++) {
-    createParticle(container);
-  }
-}
-
-function createParticle(container) {
-  const p = document.createElement('div');
-  p.classList.add('particle');
-
-  const size   = Math.random() * 4 + 1;          // 1–5 px
-  const left   = Math.random() * 100;             // 0–100 %
-  const delay  = Math.random() * 12;              // 0–12 s
-  const dur    = Math.random() * 10 + 8;          // 8–18 s
-
-  p.style.cssText = `
-    width:  ${size}px;
-    height: ${size}px;
-    left:   ${left}%;
-    bottom: -10px;
-    animation-duration:  ${dur}s;
-    animation-delay:     ${delay}s;
-    opacity: 0;
-  `;
-
-  container.appendChild(p);
-
-  // Recycle particle after animation ends
-  p.addEventListener('animationend', () => {
-    p.style.left = `${Math.random() * 100}%`;
-    p.style.animationDuration = `${Math.random() * 10 + 8}s`;
-    p.style.animationDelay   = '0s';
-  });
-}
-
-/* ============================================================
-   3. TYPED TEXT EFFECT
+   2. TYPED TEXT EFFECT
    ============================================================ */
 function initTyped() {
   const el = document.getElementById('typed');
   if (!el) return;
 
   const phrases = [
-    'AI & Machine Learning',
+    'Hardware · Software',
     'Embedded Systems',
+    'Semiconductors',
     'Circuit Design',
-    'Renewable Energy',
-    'Research & Innovation',
-    'Software + Hardware',
+    'AI/ML',
   ];
 
   let phraseIdx = 0;
   let charIdx   = 0;
   let deleting  = false;
-  let paused    = false;
 
   function tick() {
     const current = phrases[phraseIdx];
@@ -94,8 +48,7 @@ function initTyped() {
       charIdx++;
 
       if (charIdx === current.length) {
-        paused = true;
-        setTimeout(() => { paused = false; deleting = true; tick(); }, 2000);
+        setTimeout(() => { deleting = true; tick(); }, 2000);
         return;
       }
     } else {
@@ -116,31 +69,34 @@ function initTyped() {
 }
 
 /* ============================================================
-   4. NAVBAR — SCROLL EFFECT
+   3. NAVBAR — SCROLL EFFECT
    ============================================================ */
 function initNavbar() {
   const navbar = document.getElementById('navbar');
   if (!navbar) return;
 
   const onScroll = () => {
-    if (window.scrollY > 60) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // run once on load
+  onScroll();
 }
 
 /* ============================================================
-   5. MOBILE MENU
+   4. MOBILE MENU
    ============================================================ */
 function initMobileMenu() {
+  const navbar    = document.getElementById('navbar');
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('navLinks');
-  if (!hamburger || !navLinks) return;
+  if (!hamburger || !navLinks || !navbar) return;
+
+  const close = () => {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+    document.body.style.overflow = '';
+  };
 
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
@@ -148,30 +104,17 @@ function initMobileMenu() {
     document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
   });
 
-  // Close on link click
   navLinks.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navLinks.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', close);
   });
 
-  // Close on outside click
   document.addEventListener('click', (e) => {
-    if (!navbar.contains(e.target) && navLinks.classList.contains('open')) {
-      hamburger.classList.remove('open');
-      navLinks.classList.remove('open');
-      document.body.style.overflow = '';
-    }
+    if (!navbar.contains(e.target) && navLinks.classList.contains('open')) close();
   });
 }
 
-// Reference navbar for outside-click closure
-const navbar = document.getElementById('navbar');
-
 /* ============================================================
-   6. SCROLL REVEAL
+   5. SCROLL REVEAL
    ============================================================ */
 function initScrollReveal() {
   const elements = document.querySelectorAll('.reveal');
@@ -180,13 +123,7 @@ function initScrollReveal() {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          // Trigger skill bars when skills section enters view
-          if (entry.target.closest('#skills')) {
-            animateSkillBars();
-          }
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     },
     { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
@@ -196,41 +133,16 @@ function initScrollReveal() {
 }
 
 /* ============================================================
-   7. HERO REVEAL — staggered entrance
+   6. HERO REVEAL — staggered entrance
    ============================================================ */
 function initHeroReveal() {
-  const heroItems = document.querySelectorAll('#hero .reveal');
-  heroItems.forEach((el, i) => {
-    setTimeout(() => {
-      el.classList.add('visible');
-    }, 200 + i * 150);
+  document.querySelectorAll('#hero .reveal').forEach((el, i) => {
+    setTimeout(() => el.classList.add('visible'), 200 + i * 150);
   });
 }
 
 /* ============================================================
-   8. SKILL BARS ANIMATION
-   ============================================================ */
-let skillBarsAnimated = false;
-
-function initSkillBars() {
-  // Will be triggered by scroll reveal observer
-}
-
-function animateSkillBars() {
-  if (skillBarsAnimated) return;
-  skillBarsAnimated = true;
-
-  const fills = document.querySelectorAll('.skill-bar-fill');
-  fills.forEach((fill, i) => {
-    const targetWidth = fill.getAttribute('data-width') || '0';
-    setTimeout(() => {
-      fill.style.width = targetWidth + '%';
-    }, i * 120);
-  });
-}
-
-/* ============================================================
-   9. ACTIVE NAV LINK — highlight on scroll
+   7. ACTIVE NAV LINK — highlight on scroll
    ============================================================ */
 function initActiveNavLinks() {
   const sections = document.querySelectorAll('section[id]');
@@ -255,18 +167,14 @@ function initActiveNavLinks() {
 }
 
 /* ============================================================
-   10. BACK TO TOP
+   8. BACK TO TOP
    ============================================================ */
 function initBackToTop() {
   const btn = document.getElementById('backToTop');
   if (!btn) return;
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-      btn.classList.add('visible');
-    } else {
-      btn.classList.remove('visible');
-    }
+    btn.classList.toggle('visible', window.scrollY > 400);
   }, { passive: true });
 
   btn.addEventListener('click', () => {
@@ -275,7 +183,7 @@ function initBackToTop() {
 }
 
 /* ============================================================
-   11. CONTACT FORM — mailto handler
+   9. CONTACT FORM — opens a pre-filled email draft (mailto)
    ============================================================ */
 function initContactForm() {
   const form = document.getElementById('contactForm');
@@ -294,61 +202,85 @@ function initContactForm() {
       return;
     }
 
-    const mailtoBody = encodeURIComponent(
+    const body = encodeURIComponent(
       `Hi Johnson,\n\nMy name is ${name} (${email}).\n\n${message}\n\nBest regards,\n${name}`
     );
-    const mailtoSubject = encodeURIComponent(subject);
-    const mailtoLink = `mailto:johnsonjasson01@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
-    window.location.href = mailtoLink;
+    window.location.href =
+      `mailto:johnsonjasson01@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 
-    showToast('Opening your email client...', 'success');
-    form.reset();
+    showToast('Opening an email draft in your mail app. Press send there to deliver it.', 'success');
   });
 }
 
 /* ============================================================
-   12. TOAST NOTIFICATION
+   10. COPY EMAIL ADDRESS
+   ============================================================ */
+function initCopyEmail() {
+  const btn = document.getElementById('copyEmail');
+  if (!btn) return;
+
+  const ADDRESS = 'johnsonjasson01@gmail.com';
+
+  btn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(ADDRESS);
+      showToast('Email address copied.', 'success');
+    } catch (err) {
+      // Fallback for browsers that block the clipboard API
+      const tmp = document.createElement('textarea');
+      tmp.value = ADDRESS;
+      document.body.appendChild(tmp);
+      tmp.select();
+      const ok = document.execCommand && document.execCommand('copy');
+      tmp.remove();
+      showToast(ok ? 'Email address copied.' : ADDRESS, ok ? 'success' : 'error');
+    }
+  });
+}
+
+/* ============================================================
+   11. TOAST NOTIFICATION
    ============================================================ */
 function showToast(message, type = 'success') {
-  // Remove existing toast
   const existing = document.querySelector('.toast');
   if (existing) existing.remove();
 
   const toast = document.createElement('div');
   toast.className = `toast toast-${type}`;
+  toast.setAttribute('role', 'status');
   toast.innerHTML = `
     <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
-    <span>${message}</span>
+    <span></span>
   `;
+  toast.querySelector('span').textContent = message;
 
-  // Inline styles for the toast (no extra CSS needed)
   Object.assign(toast.style, {
-    position:     'fixed',
-    bottom:       '90px',
-    right:        '32px',
-    display:      'flex',
-    alignItems:   'center',
-    gap:          '10px',
-    background:   type === 'success' ? 'rgba(0,255,255,0.15)' : 'rgba(255,77,109,0.15)',
-    border:       `1px solid ${type === 'success' ? 'rgba(0,255,255,0.4)' : 'rgba(255,77,109,0.4)'}`,
-    color:        type === 'success' ? '#00FFFF' : '#ff4d6d',
-    padding:      '14px 20px',
-    borderRadius: '12px',
-    fontSize:     '0.88rem',
-    fontWeight:   '600',
-    fontFamily:   "'Montserrat', sans-serif",
+    position:       'fixed',
+    bottom:         '90px',
+    right:          '32px',
+    maxWidth:       'min(420px, calc(100vw - 48px))',
+    display:        'flex',
+    alignItems:     'center',
+    gap:            '10px',
+    background:     type === 'success' ? 'rgba(0,255,255,0.15)' : 'rgba(255,77,109,0.15)',
+    border:         `1px solid ${type === 'success' ? 'rgba(0,255,255,0.4)' : 'rgba(255,77,109,0.4)'}`,
+    color:          type === 'success' ? '#00FFFF' : '#ff4d6d',
+    padding:        '14px 20px',
+    borderRadius:   '12px',
+    fontSize:       '0.88rem',
+    fontWeight:     '600',
+    fontFamily:     "'Montserrat', sans-serif",
     backdropFilter: 'blur(12px)',
-    zIndex:       '9999',
-    boxShadow:    '0 8px 32px rgba(0,0,0,0.3)',
-    transform:    'translateY(20px)',
-    opacity:      '0',
-    transition:   'all 0.35s cubic-bezier(0.4,0,0.2,1)',
+    zIndex:         '9999',
+    boxShadow:      '0 8px 32px rgba(0,0,0,0.3)',
+    transform:      'translateY(20px)',
+    opacity:        '0',
+    transition:     'all 0.35s cubic-bezier(0.4,0,0.2,1)',
   });
 
   document.body.appendChild(toast);
 
-  // Animate in
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       toast.style.transform = 'translateY(0)';
@@ -356,16 +288,15 @@ function showToast(message, type = 'success') {
     });
   });
 
-  // Animate out
   setTimeout(() => {
     toast.style.transform = 'translateY(20px)';
     toast.style.opacity   = '0';
     setTimeout(() => toast.remove(), 400);
-  }, 3500);
+  }, 4000);
 }
 
 /* ============================================================
-   13. SMOOTH SCROLL — for all anchor links
+   12. SMOOTH SCROLL — for in-page anchor links
    ============================================================ */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -381,15 +312,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 /* ============================================================
-   14. CARD TILT EFFECT — subtle 3D on project cards
+   13. CARD TILT EFFECT — subtle 3D on project and skill cards
    ============================================================ */
 document.querySelectorAll('.project-card, .skill-category').forEach(card => {
   card.addEventListener('mousemove', (e) => {
-    const rect   = card.getBoundingClientRect();
-    const x      = e.clientX - rect.left;
-    const y      = e.clientY - rect.top;
-    const cx     = rect.width  / 2;
-    const cy     = rect.height / 2;
+    const rect    = card.getBoundingClientRect();
+    const x       = e.clientX - rect.left;
+    const y       = e.clientY - rect.top;
+    const cx      = rect.width  / 2;
+    const cy      = rect.height / 2;
     const rotateX = ((y - cy) / cy) * -5;
     const rotateY = ((x - cx) / cx) *  5;
 
@@ -404,67 +335,22 @@ document.querySelectorAll('.project-card, .skill-category').forEach(card => {
 });
 
 /* ============================================================
-   15. COUNTER ANIMATION — stat numbers in About section
-   ============================================================ */
-function animateCounter(el, target, suffix = '', duration = 1200) {
-  const start     = 0;
-  const startTime = performance.now();
-
-  function update(currentTime) {
-    const elapsed  = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased    = 1 - Math.pow(1 - progress, 3); // ease-out cubic
-    const value    = start + (target - start) * eased;
-
-    el.textContent = Number.isInteger(target)
-      ? Math.round(value) + suffix
-      : value.toFixed(1) + suffix;
-
-    if (progress < 1) requestAnimationFrame(update);
-  }
-
-  requestAnimationFrame(update);
-}
-
-// Trigger counters when About section is visible
-const aboutSection = document.getElementById('about');
-if (aboutSection) {
-  const counterObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          document.querySelectorAll('.stat-num').forEach(el => {
-            const raw = el.textContent.trim();
-            if (raw.includes('4.0')) animateCounter(el, 4.0, '', 1000);
-            else if (raw.includes('5+')) { el.textContent = '5+'; }
-            else if (raw.includes('2'))  animateCounter(el, 2, '', 800);
-          });
-          counterObserver.disconnect();
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-  counterObserver.observe(aboutSection);
-}
-
-/* ============================================================
-   16. CURSOR GLOW EFFECT (desktop only)
+   14. CURSOR GLOW EFFECT (desktop only)
    ============================================================ */
 if (window.matchMedia('(pointer: fine)').matches) {
   const glow = document.createElement('div');
   Object.assign(glow.style, {
-    position:     'fixed',
-    width:        '300px',
-    height:       '300px',
-    borderRadius: '50%',
-    background:   'radial-gradient(circle, rgba(0,255,255,0.06) 0%, transparent 70%)',
-    pointerEvents:'none',
-    zIndex:       '0',
-    transform:    'translate(-50%, -50%)',
-    transition:   'left 0.1s ease, top 0.1s ease',
-    top:          '-999px',
-    left:         '-999px',
+    position:      'fixed',
+    width:         '300px',
+    height:        '300px',
+    borderRadius:  '50%',
+    background:    'radial-gradient(circle, rgba(0,255,255,0.06) 0%, transparent 70%)',
+    pointerEvents: 'none',
+    zIndex:        '0',
+    transform:     'translate(-50%, -50%)',
+    transition:    'left 0.1s ease, top 0.1s ease',
+    top:           '-999px',
+    left:          '-999px',
   });
   document.body.appendChild(glow);
 
@@ -475,37 +361,50 @@ if (window.matchMedia('(pointer: fine)').matches) {
 }
 
 /* ============================================================
-   17. SECTION ENTRANCE — add subtle line decoration
+   15. ENSURE HERO CONTENT IS VISIBLE AFTER LOAD
    ============================================================ */
 window.addEventListener('load', () => {
-  // Ensure all hero reveals fire even if IntersectionObserver missed them
-  document.querySelectorAll('#hero .reveal').forEach(el => {
-    el.classList.add('visible');
-  });
+  document.querySelectorAll('#hero .reveal').forEach(el => el.classList.add('visible'));
 });
 
+/* ============================================================
+   16. JBOT — small keyword-based assistant (secondary)
+   Keep these answers in sync with the page and resume.
+   ============================================================ */
 (function () {
   var KB = [
-    { k: ["education","study","studying","degree","major","university","school","college","alfred","cornell","gpa","scholar","break through","btt"],
-      a: "Johnson is pursuing a B.S. in Electrical & Electronics Engineering with a double major in Mathematics at Alfred University (2025–2029). He's a Presidential Scholar with a 4.0 GPA and on the Dean's List. He's also part of Cornell University's Break Through Tech AI & Machine Learning program (2026–2027)." },
-    { k: ["skill","skills","language","languages","python","matlab","tools","tech stack","programming","proficient","code","coding"],
-      a: "Johnson's core skills include Python, C/C++, MATLAB, and Verilog for programming; machine learning and CNNs; embedded systems (ESP32, Arduino); CAD tools (SolidWorks, AutoCAD); and lab instrumentation. He also works with HPC/Linux and computational chemistry tools like CRYSTAL23." },
-    { k: ["project","projects","built","build","portfolio","work","digital twin","battery","esp32","semiconductor","ev","research"],
-      a: "Some of Johnson's featured projects: an AI-powered Digital Twin for smart battery management (CNNs, +30% efficiency), Battery Life Prediction with ML (benchmarked 14 models, best RMSE 0.085), a Wi-Fi Smart Switch using ESP32, organic-semiconductor (OSCs) research at the Knepp Lab, and an EV engine-conversion project. Scroll to the Projects section to see them all." },
-    { k: ["experience","intern","internship","job","worked","tanesco","step-lab","ge aerospace","forage","career"],
-      a: "Johnson's experience includes an Electrical Engineering internship at TANESCO in Tanzania (33kV transformers, AutoCAD, GIS), Engineering Lab Support at STEP-LAB (EV drivetrain project, SolidWorks), and a GE Aerospace electrical engineering job simulation via Forage." },
-    { k: ["research","knepp","semiconductor","ferroelectric","monte carlo","hpc","crystal","computational"],
-      a: "Johnson does computational research at the Knepp Lab studying how temperature affects electronic coupling in organic semiconductors, using DFT and the quasi-harmonic approximation on Linux HPC. He's also modeled ferroelectric FeFET devices for neuromorphic computing." },
-    { k: ["sera","company","co-founder","cofounder","startup","edtech","venture","scholarship","tanzania"],
-      a: "Johnson is Co-Founder of SERA Access, an EdTech platform helping Tanzanian students find verified scholarships, fellowships, and internships, paired with mentorship and application support. It's running an invitation-only 2026 pilot. See it at seraaccess.com." },
-    { k: ["leadership","nsbe","colorstack","president","vice president","club","lead","involvement"],
-      a: "Johnson serves as President of the NSBE chapter and Vice President of ColorStack at Alfred University, plus Co-Founder of SERA Access; all focused on championing diversity in STEM and helping students grow." },
-    { k: ["contact","email","reach","hire","connect","linkedin","github","phone","get in touch"],
-      a: "You can reach Johnson at johnsonjasson01@gmail.com. Find him on <a href='https://www.linkedin.com/in/johnson-jasson' target='_blank'>LinkedIn</a> and <a href='https://github.com/Jhoncho517' target='_blank'>GitHub</a>. He's actively seeking internships and research opportunities!" },
+    { k: ["education","study","studying","degree","major","university","school","college","alfred","cornell","gpa","scholar","break through","btt","coursework","course"],
+      a: "Johnson is pursuing a B.S. in Electrical & Electronics Engineering with a double major in Mathematics at Alfred University (expected May 2029), with a 4.00 GPA as a Presidential Scholar. He's also in Cornell University's Break Through Tech AI Program (Mar 2026 – Mar 2027). <a href='#education'>See Education</a>." },
+
+    { k: ["skill","skills","language","languages","python","matlab","tools","tech stack","programming","code","coding","c++"],
+      a: "Johnson works in C/C++ (ESP-IDF, FreeRTOS), Python, and MATLAB; uses lab instruments like oscilloscopes and multimeters; models devices with Monte Carlo methods, DFT, and Linux HPC; and builds ML models with scikit-learn and TensorFlow. <a href='#skills'>See Skills</a>." },
+
+    { k: ["project","projects","built","build","switch","esp32","edge vision","battery","embedded"],
+      a: "Johnson's projects include an ESP32 Wi-Fi Smart Switch (completed), the Edge Vision Sensing Platform (in progress: ESP32, FreeRTOS, multi-sensor firmware), and battery health prediction with machine learning as course research and a poster presentation (14 models benchmarked, best RMSE 0.085). <a href='#projects'>See Projects</a>." },
+
+    { k: ["experience","intern","internship","job","worked","work","tanesco","career","step-lab"],
+      a: "Johnson modeled HfO₂ ferroelectric transistors for neuromorphic memory in summer research (May – Jul 2026), was a Computational Chemistry Research Assistant at the Knepp Lab (Jan – May 2026), and interned in Electrical Engineering at TANESCO in Tanzania (Jul – Sep 2024), where he diagnosed a 0.80 power factor and recommended a capacitor-bank fix. <a href='#experience'>See Experience</a>." },
+
+    { k: ["research","knepp","semiconductor","semiconductors","ferroelectric","fefet","monte carlo","hpc","crystal","computational","neuromorphic","dft"],
+      a: "Johnson modeled polarization switching across 5,000 grains in 8.3 nm HfO₂ FeFETs for multi-level neuromorphic memory (May – Jul 2026), and studied how temperature affects electron coupling in organic semiconductors using DFT on Linux HPC at the Knepp Lab (Jan – May 2026). <a href='#experience'>See Research</a>." },
+
+    { k: ["sera","company","co-founder","cofounder","founder","startup","edtech","venture","scholarship","tanzania"],
+      a: "Johnson co-founded SERA and is its Lead Developer. He built the platform in HTML and CSS using AI-assisted development tools (Claude Code, Cursor) and deployed it on Vercel. SERA helps students in Tanzania and East Africa find scholarships, internships, and mentorship. <a href='https://www.seraaccess.com/' target='_blank' rel='noopener noreferrer'>Visit seraaccess.com</a>." },
+
+    { k: ["leadership","nsbe","colorstack","robotics","president","chair","club","lead","involvement","nvidia","bridge"],
+      a: "Johnson is President of the NSBE chapter, Professional Development Chair of ColorStack, and Vice President of the Robotics Club at Alfred University, and took part in the NVIDIA Summer Bridge Series (Jun – Aug 2026). <a href='#leadership'>See Leadership</a>." },
+
+    { k: ["resume","cv","download","pdf"],
+      a: "You can download Johnson's resume here: <a href='Johnson_Jasson_Resume.pdf' target='_blank' rel='noopener noreferrer'>Johnson_Jasson_Resume.pdf</a>." },
+
+    { k: ["contact","email","reach","hire","connect","linkedin","github","get in touch"],
+      a: "You can reach Johnson at <a href='mailto:johnsonjasson01@gmail.com'>johnsonjasson01@gmail.com</a>, or find him on <a href='https://www.linkedin.com/in/johnson-jasson' target='_blank' rel='noopener noreferrer'>LinkedIn</a> and <a href='https://github.com/Jhoncho517' target='_blank' rel='noopener noreferrer'>GitHub</a>. He's seeking Summer 2027 internships in hardware engineering, semiconductors, and embedded systems." },
+
     { k: ["who","about","yourself","introduce","summary","tell me about"],
-      a: "Johnson J. Jasson is a first-generation college student, Presidential Scholar, and 4.0 EE + Mathematics student at Alfred University. He builds at the intersection of hardware, software, and AI and is passionate about engineering, tech, and business." },
+      a: "Johnson Jasson is a first-generation Electrical & Electronics Engineering and Mathematics student at Alfred University (4.00 GPA). He builds where hardware meets software: embedded firmware, semiconductor device modeling, and applied AI/ML. <a href='#about'>See About</a>." },
+
     { k: ["ai","machine learning","ml","neural","deep learning","cnn"],
-      a: "AI/ML is central to Johnson's work: he's built CNN-based battery health models, an AI digital twin, and completed Cornell's Break Through Tech AI program covering logistic regression, KNN, deep neural networks, NLP chatbots, TensorFlow, and scikit-learn." }
+      a: "Johnson built CNN-based battery health models as course research, benchmarking 14 models, and is completing Cornell's Break Through Tech AI Program, covering logistic regression, KNN, deep neural networks, NLP, TensorFlow, and scikit-learn." }
   ];
 
   var GREETINGS = ["hi","hello","hey","yo","hola","greetings","sup"];
@@ -514,15 +413,15 @@ window.addEventListener('load', () => {
   function add(text, who) {
     var d = document.createElement("div");
     d.className = "jbot-msg " + (who === "user" ? "jbot-user" : "jbot-bot");
-    d.innerHTML = text;
+    if (who === "user") d.textContent = text; else d.innerHTML = text;
     msgs.appendChild(d);
     msgs.scrollTop = msgs.scrollHeight;
   }
 
   function answer(q) {
     var t = q.toLowerCase().trim();
-    if (GREETINGS.indexOf(t) !== -1 || t.length < 3) {
-      return "Hi! I'm Jbot 🤖 ! ask me anything about Johnson: his education, skills, projects, experience, SERA Access, or how to reach him.";
+    if (GREETINGS.indexOf(t) !== -1 || t.length < 2) {
+      return "Hi! I'm Jbot 🤖. Ask me anything about Johnson: his projects, research, experience, skills, SERA, leadership, or how to reach him.";
     }
     var best = null, bestScore = 0;
     KB.forEach(function (item) {
@@ -531,7 +430,7 @@ window.addEventListener('load', () => {
       if (score > bestScore) { bestScore = score; best = item; }
     });
     if (best && bestScore > 0) return best.a;
-    return "I can only answer questions about Johnson. Try asking about his education, skills, projects, experience, research, SERA Access, or contact info!";
+    return "I can only answer questions about Johnson. Try asking about his projects, research, experience, skills, SERA, leadership, resume, or contact info.";
   }
 
   function send(q) {
@@ -542,18 +441,19 @@ window.addEventListener('load', () => {
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    var toggle = document.getElementById("jbot-toggle");
-    var win = document.getElementById("jbot-window");
-    var close = document.getElementById("jbot-close");
+    var toggle  = document.getElementById("jbot-toggle");
+    var win     = document.getElementById("jbot-window");
+    var close   = document.getElementById("jbot-close");
     var sendBtn = document.getElementById("jbot-send");
-    msgs = document.getElementById("jbot-messages");
+    msgs  = document.getElementById("jbot-messages");
     input = document.getElementById("jbot-text");
+    if (!toggle || !win) return;
 
     var opened = false;
     toggle.onclick = function () {
       win.classList.toggle("jbot-hidden");
       if (!opened && !win.classList.contains("jbot-hidden")) {
-        add("Hi! I'm <strong>Jbot</strong> 🤖 ! Johnson's assistant. Ask me about his education, projects, skills, or tap a topic below.", "bot");
+        add("Hi! I'm <strong>Jbot</strong> 🤖, Johnson's assistant. Ask me about his projects, research, or experience, or tap a topic below.", "bot");
         opened = true;
       }
     };
